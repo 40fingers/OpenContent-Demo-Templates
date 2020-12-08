@@ -1,0 +1,11 @@
+{
+  "fields": {
+    "ModuleTitle": {
+      "type": "text"
+    },
+    "Text": {
+      "type": "ckeditor",
+      "configset": "basic"
+    }
+  }
+}
