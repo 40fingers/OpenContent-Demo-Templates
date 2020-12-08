@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+			"CKEditor1": {
+				"title": "CkEditor",
+				"type": "string"
+			},
+			"CKEditor2A": {
+				"title": "CkEditor Basic",
+				"type": "string"
+			},
+			"CKEditor2B": {
+				"title": "CkEditor Default",
+				"type": "string"
+			},
+			"CKEditor2C": {
+				"title": "CkEditor Full",
+				"type": "string"
+			},
+			"CKEditor3": {
+				"title": "CkEditor Extra allowed html",
+				"type": "string"
+			},
+			"CKEditor3a": {
+				"title": "CkEditor Extra All HTML",
+				"type": "string"
+			},
+			"CKEditor4": {
+				"title": "CkEditor With StyleSet",
+				"type": "string"
+			},
+			"CKEditor5": {
+				"title": "CkEditor size",
+				"type": "string"
+			},
+			"CKEditor6": {
+				"title": "CkEditor Custom Toolbar",
+				"type": "string"
+			}
+		}
+}
