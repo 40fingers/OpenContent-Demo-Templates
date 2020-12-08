@@ -1,0 +1,79 @@
+{
+	"fields": {
+		"CKEditor1": {
+			"type": "ckeditor"
+			
+		},
+		"CKEditor2A": {
+			"type": "ckeditor",
+			"configset":"basic",
+			
+		},
+		"CKEditor2B": {
+			"type": "ckeditor",
+			"configset":"default",
+			
+		},
+		"CKEditor2C": {
+			"type": "ckeditor",
+			"configset":"full",
+			
+		},
+		"CKEditor3": {
+			"type": "ckeditor",
+			"ckeditor":{
+					"extraAllowedContent": "table tr th td div span(*);"
+				}
+		},
+		"CKEditor3a": {
+			"type": "ckeditor",
+			"ckeditor":{
+					"allowedContent" : true
+				}
+		},
+		"CKEditor4": {
+			"type": "ckeditor",
+			"ckeditor":{
+					"contentsCss": "..../Editor.css",
+					"stylesSet" : [
+					{ "name": "Blue H3", "element": "h3","styles": { "color": "Blue" } },
+                    { "name": "Red H4",  "element": "h4","styles": { "color": "Red" } },
+					{ "name": "Red Class", "element": "span", "attributes": { "class": "NormalRed" } },
+					{ "name": "Marker: Yellow", "element": "div", "styles": { "background-color": "Yellow" }}
+						
+					]
+				}
+		},
+		"CKEditor5": {
+			"type": "ckeditor",
+			"ckeditor":{
+				"height": 700,
+				"width": '50%'
+			}
+			
+		},		
+		"CKEditor6": {
+			"type": "ckeditor",
+			"ckeditor":{
+			   "toolbar": [
+				{ "name": "text", 
+					"items": ["Bold" , "Italic", "Underline" , "RemoveFormat"]
+				},
+				{ "name": "style", 
+					"items": ["Format"]
+				},
+				{ "name": "layout", 
+					"items": ["Table" ,  "NumberedList", "BulletedList", "Outdent", "Indent"]
+				},				
+				{ "name": "link", 
+					"items": ["Link" , "Unlink"]
+				},
+				{ "name": "Source", 
+					"items": ["ShowBlocks", "Source"]
+				}
+				]
+			}
+			
+		}
+	}
+}
