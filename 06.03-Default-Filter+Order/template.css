@@ -1,0 +1,10 @@
+.oc-multiple{
+	margin:0;
+	padding: 0;
+}
+.oc-multiple li{
+	padding: 0.1em 0.7em;
+	margin: 0 0 1em;
+	background:#eee;
+	list-style:none;
+}
