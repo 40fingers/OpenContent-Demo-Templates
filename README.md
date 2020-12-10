@@ -9,7 +9,8 @@ They are not "ready to use Templates".
 01.xx Field Definition Options<br>
 02.xx Handlebars Examples<br>
 03.xx Razor Examples<br>
-04.xx Additional Data<br>
-05.xx Filters, Order etc.<br>
-06.xx DNN Search integration<br>
+04.xx Template Settings<br>
+05.xx Additional Data<br>
+06.xx Filters + Order<br>
+07.xx DNN Search integration<br>
 
