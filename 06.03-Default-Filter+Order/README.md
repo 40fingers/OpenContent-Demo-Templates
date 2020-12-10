@@ -1,4 +1,4 @@
-#Load default filter settings 
+## Load default filter settings 
 
 The template will load default filter and order settings from filter-data.json when selected.
 
