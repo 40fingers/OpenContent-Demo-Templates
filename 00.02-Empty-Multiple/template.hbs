@@ -1,0 +1,11 @@
+<ul class="oc-multiple">
+	{{#each Items}}
+		<li>
+				<h2>{{Title}} {{#if Context.IsEditable}} <a class="edit-link" href="{{Context.EditUrl}}"><img src="/icons/sigma/Edit_16x16_Gray.png" alt="edit" /></a>{{/if}}</h2>
+				<div class="text">
+				{{Text}}
+				</div>
+		</li>
+		
+	{{/each}}
+</ul>
