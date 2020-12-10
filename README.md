@@ -7,7 +7,7 @@ They are not "ready to use Templates".
 
 ## Foldername organisation:<br>
 01.xx Field Definition Options<br>
-02.xx Handlbars Examples<br>
+02.xx Handlebars Examples<br>
 03.xx Razor Examples<br>
 04.xx Additional Data<br>
 05.xx Filters, Order etc.<br>
