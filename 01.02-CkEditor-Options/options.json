@@ -74,6 +74,13 @@
 				]
 			}
 			
-		}
+		},
+		"CKEditor7": {
+			"type": "ckeditor",
+			"ckeditor":{
+				"linkShowAdvancedTab": "true"
+			}
+			
+		},
 	}
 }

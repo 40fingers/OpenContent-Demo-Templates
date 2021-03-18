@@ -36,6 +36,10 @@
 			"CKEditor6": {
 				"title": "CkEditor Custom Toolbar",
 				"type": "string"
+			},
+			"CKEditor7": {
+				"title": "CkEditor Custom Toolbar",
+				"type": "string"
 			}
 		}
 }
