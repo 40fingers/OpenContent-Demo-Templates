@@ -78,6 +78,13 @@
 			}
 			
 		},
+		"CKEditor7": {
+			"type": "ckeditor",
+			"ckeditor":{
+				"format_tags": "p;h2;h3;h4;div"
+			}
+			
+		},	
 		"CKEditor99": {
 			"type": "ckeditor",
 			"ckeditor":{
