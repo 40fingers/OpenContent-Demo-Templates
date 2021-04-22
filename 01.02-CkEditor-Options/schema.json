@@ -37,8 +37,8 @@
 				"title": "CkEditor Custom Toolbar",
 				"type": "string"
 			},
-			"CKEditor7": {
-				"title": "CkEditor Custom Toolbar",
+			"CKEditor99": {
+				"title": "CkEditor Test",
 				"type": "string"
 			}
 		}

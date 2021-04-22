@@ -68,6 +68,9 @@
 				{ "name": "link", 
 					"items": ["Link" , "Unlink"]
 				},
+				{ "name": "Img", 
+					"items": ["EasyImageUpload"]
+				},
 				{ "name": "Source", 
 					"items": ["ShowBlocks", "Source"]
 				}
@@ -75,7 +78,7 @@
 			}
 			
 		},
-		"CKEditor7": {
+		"CKEditor99": {
 			"type": "ckeditor",
 			"ckeditor":{
 				"linkShowAdvancedTab": "true"
