@@ -37,6 +37,10 @@
 				"title": "CkEditor Custom Toolbar",
 				"type": "string"
 			},
+			"CKEditor7": {
+				"title": "CkEditor Custom Text Format",
+				"type": "string"
+			},
 			"CKEditor99": {
 				"title": "CkEditor Test",
 				"type": "string"
