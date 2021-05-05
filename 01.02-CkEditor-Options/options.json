@@ -72,7 +72,7 @@
 					"items": ["EasyImageUpload"]
 				},
 				{ "name": "Source", 
-					"items": ["ShowBlocks", "Source"]
+					"items": ["ShowBlocks", "Maximize", "Source"]
 				}
 				]
 			}
@@ -85,6 +85,28 @@
 			}
 			
 		},	
+		"CKEditor8": {
+			"type": "ckeditor",
+			"configset":"basic",
+			"ckeditor":{
+				"extraPlugins": "youtube",
+				"toolbar": [
+				{ "name": "text", 
+					"items": ["Bold" , "Italic", "Underline" , "RemoveFormat"]
+				},
+				{ "name": "link", 
+					"items": ["Link" , "Unlink"]
+				},
+				{ "name": "Img", 
+					"items": ["EasyImageUpload" , "Youtube"]
+				},
+				{ "name": "Source", 
+					"items": ["ShowBlocks", "Maximize", "Source"]
+				}
+				]
+			}
+			
+		},
 		"CKEditor99": {
 			"type": "ckeditor",
 			"ckeditor":{
