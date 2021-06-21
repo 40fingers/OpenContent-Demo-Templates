@@ -89,7 +89,7 @@
 			"type": "ckeditor",
 			"configset":"basic",
 			"ckeditor":{
-				"extraPlugins": "youtube",
+				"extraPlugins": "youtube,dnnpages",
 				"toolbar": [
 				{ "name": "text", 
 					"items": ["Bold" , "Italic", "Underline" , "RemoveFormat"]
