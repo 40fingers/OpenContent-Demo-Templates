@@ -1,0 +1,73 @@
+{{registerscript "../_Shared/jplist/js/jplist.core.min.js"}}
+{{registerscript "../_Shared/jplist/js/jplist.filter-toggle-bundle.min.js"}}
+{{registerscript "../_Shared/jplist/js/jplist.preloader-control.min.js"}}
+
+{{registerscript "/DesktopModules/OpenContent/js/alpaca-1.5.8/lib/handlebars/handlebars.js"}}
+{{registerscript "/DesktopModules/OpenContent/js/alpaca-1.5.8/lib/moment/min/moment.min.js"}}
+{{registerscript "js/handlebars.helpers.js"}}
+
+
+<div class="oc-articles list">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div id="demo" class="jplist" data-moduleid="{{Context.ModuleId}}">
+					<div class="row">
+						<aside class="col-md-3 side-bar">
+							<h4 class="filter">{{@root.Settings.Texts.Filters}}</h4>
+							
+							<!-- panel -->
+							<div id="filters" class="jplist-panel">
+							
+
+								<div id="more-filters" class="more-filters collapse md-show">
+								<!-- checkbox filters Categories-->
+								<h4>Category Filter</h4>
+								<div class="jplist-group form-group"
+									 data-control-type="checkbox-group-filter"
+									 data-control-action="filter"
+									 data-control-name="Categories">
+
+								<ul>
+								{{#each AdditionalData.Categories}}
+								<li class="checkbox">
+									<label for="{{this}}">
+										<input data-path="{{Id}}"
+											   id="{{Id}}"
+											   type="checkbox" />
+										{{Title}}
+									</label>
+								</li>
+								{{/each}}
+								</ul>
+								</div>
+							</div>
+							
+							 <!-- preloader for data sources -->
+						  <div 
+							 class="jplist-hide-preloader jplist-preloader"
+							 data-control-type="preloader" 
+							 data-control-name="preloader" 
+							 data-control-action="preloader">
+							 <img src="{{@root.HomeDirectory}}OpenContent/Templates/Articles/ajax-loader-line.gif" alt="Loading..." title="Loading..." />
+						  </div>	
+						  
+							
+						</aside>
+						<div class="items">
+							<!-- data -->
+							<div class="list" data-moduleid="{{Context.ModuleId}}">
+							</div>
+							
+							
+							<div class="jplist-no-results">
+								<p>-- No Articles found --</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>

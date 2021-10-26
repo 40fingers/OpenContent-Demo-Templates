@@ -1,0 +1,100 @@
+{{registerform "bootstrap"}}
+	
+<article id="article-detail" class="oc-articles detail" data-listpage="{{Context.MainUrl}}">
+	
+	<header>
+		{{#if Context.IsEditMode}}
+		<div class="editBar">
+			<span class="status">{{publishstatus}} : {{publishstartdate}} - {{publishenddate}}</span>
+			<a class="edit-link" href="{{Context.EditUrl}}" title="Edit Item"><i class="fa fa-pencil"></i></a>
+		</div>
+		{{/if}}
+		<h1 class="title">{{Title}}</h1>
+	</header>
+	
+	<section class="container">
+		{{Text}}
+	</section>
+
+    <footer>
+        
+					{{#if Categories}}
+						<div class="categories">
+						<h3>Categories</h3> 
+							<ul>
+							{{#each Categories}}
+								<li>
+									<a href="{{@root.Context.MainUrl}}#Categories:pathGroup={{Id}}">{{Title}}</a>
+								</li>
+							{{/each}}
+							</ul>
+						</div>
+					{{/if}}
+					{{#if Tags}}
+					<div class="tags">
+					Tags: <span id="tags">{{Tags}}</span>
+					</div>
+					{{/if}}
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="more text-right">
+						<a href="{{@root.Context.MainUrl}}" class="btn btn-primary">Back to List</a>
+					</div>
+				</div>
+
+                <div class="col-12 col-lg-8">
+					<h3>Related Items{{#if Context.IsEditMode}}*{{/if}}</h3>
+					
+					<div class="row related" id="related-items"></div>
+					{{#if Context.IsEditMode}}<h6> *) Based on Tags</h6>{{/if}}
+				</div>
+
+        </section>
+    </footer>
+</article>
+
+<script>
+
+jQuery(".flexslider").after(jQuery("[id$=View_pDemo]"));
+
+var  strAfterResponse = 
+$(document).ready(function () {
+    var moduleId = {{@root.Context.ModuleId}};
+    var itemId = "{{@root.Context.Id}}";
+	var itemTags = "{{Tags}}";
+
+    var sf = $.ServicesFramework(moduleId);
+
+    
+	// Get the related items
+
+	var api = new $.openContentRestApiV2(sf);
+
+    var filter = {
+        rules: [{ field: "Tags", operator: "EQUAL", value: itemTags.replace(',',' ') }]
+    }
+	
+    var relatedtemplate = Handlebars.compile($('#related-template').html());
+
+    
+
+    api.getAll('Items', 0, 5, filter, null, function (data) {
+        // success
+        
+		// Mark the current item (to exclude)
+		for (var i=0 ; i < data.Items.length ; i++)
+		{
+			if(itemId == data.Items[i].Context.Id){
+				data.Items[i].Context.Current = true;
+			}
+		}
+		
+        $('#related-items').html(relatedtemplate(data));
+    }, function () {
+        // fail
+
+    });									 
+});
+
+
+</script>
