@@ -1,0 +1,13 @@
+<script id="related-template" type="text/x-handlebars-template">
+	{{#each Items}}
+		{{#unless Context.Current}}
+		<ul>
+			<li>
+				<a href="{{Context.DetailUrl}}">
+					{{Title}}
+				</a>
+			</li>
+		</ul>
+		{{/unless}}
+	{{/each}}
+</script>

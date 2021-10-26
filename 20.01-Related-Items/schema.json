@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+	
+    "Title": {
+      "type": "string",
+      "title": "Title",
+      "required": true
+    },
+    "Text": {
+      "type": "string",
+      "title": "Article Text"
+    },
+    "Categories": {
+      "type": "array",
+      "title": "Categories"
+    },
+    "Tags": {
+      "type": "string",
+      "title": "Tags"
+    },
+    "publishstartdate": {
+      "title": "Publish Start Date",
+      "required": true,
+      "default": "today"
+    },
+    "publishenddate": {
+      "title": "Publish End Date",
+      "required": true,
+      "default": "2099-12-31"
+    },
+    "publishstatus": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "draft",
+        "published"
+      ],
+      "default": "published",
+      "required": true
+    }
+  }
+}

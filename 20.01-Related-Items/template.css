@@ -1,0 +1,31 @@
+.d-none{
+	display:none;
+}
+.jplist-hidden {
+    display: none;
+}
+.sorthandle{
+	background: #eee;
+	padding: 0.5em;
+	text-align:right;
+}
+
+.jplist-pagination .disabled{display:none;}
+.jplist-pagination li{list-style-type:none; margin-right:0.3em;}
+
+.jplist-pagination li.active a{color:#000;}
+
+
+.jplist-hide-preloader{display:none}
+.jplist-preloader{height:30px;line-height:30px;margin:10px 10px 0 0;float:right}
+
+.flexslider li {list-style-type: none;}
+.contmain ul.slides {
+margin: 0;
+padding: 0;
+}
+.contmain ul.slides li {
+margin: 0;
+padding: 0;
+}
+
