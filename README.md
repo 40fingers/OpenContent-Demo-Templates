@@ -13,4 +13,5 @@ They are not "ready to use Templates".
 05.xx Additional Data<br>
 06.xx Filters + Order<br>
 07.xx DNN Search integration<br>
+20.xx Advanced Examples<br>
 
