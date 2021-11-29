@@ -27,26 +27,7 @@
             "clientside": true
           }
         },
-        "schemaInTemplate": true,
-        "optionsInTemplate": true,
-        "additionalDataInTemplate": true,
-        "model": {
-          "Submissions": {
-            "query": {
-              "RelatedField": "itemId",
-              "Filter": {
-                "approved": "true"
-              },
-              "Sort": [
-                {
-                  "Field": "$timestamp",
-                  "Order": "desc"
-                }
-              ]
-            }
-          }
-        }
-        
+        "additionalDataInTemplate": true        
       }
     },
     

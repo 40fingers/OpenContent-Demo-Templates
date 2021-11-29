@@ -46,8 +46,10 @@
 					<h3>Related Items{{#if Context.IsEditMode}}*{{/if}}</h3>
 					
 					<div class="row related" id="related-items"></div>
-					{{#if Context.IsEditMode}}<h6> *) Based on Tags</h6>{{/if}}
+					{{#if Context.IsEditMode}}<h6> *) Based on Categories (AND)</h6>{{/if}}
 				</div>
+				
+				
 
         </section>
     </footer>
@@ -61,7 +63,34 @@ var  strAfterResponse =
 $(document).ready(function () {
     var moduleId = {{@root.Context.ModuleId}};
     var itemId = "{{@root.Context.Id}}";
-	var itemTags = "{{Tags}}";
+	
+	// Name of the field to filter on.
+	var filterField = "Categories"
+	
+	// Get Categories Array.
+	var categories = {{convertToJson Categories}};
+	
+	let myRules = new Array();
+	
+	// Fill the rules Array
+	categories.forEach(function(item, index){
+		var rule = {field: filterField, operator: "EQUAL"}
+		rule.value = item.Id;
+		
+		myRules.push(rule);
+	});
+	
+	// console.log(myRules);
+
+	// Create the filter
+	// Please note that this filter will use AND for the array, so related will match all Categories passed.
+	// There's currently no implementation to tell OC to use other Boolean operators for this filter array.
+	// If you need an OR filter you can get the filtered data one by one (separate API calls) and do your own processing afterwards.
+	
+	 var filter = {
+        rules: myRules
+    }
+	
 
     var sf = $.ServicesFramework(moduleId);
 
@@ -70,9 +99,7 @@ $(document).ready(function () {
 
 	var api = new $.openContentRestApiV2(sf);
 
-    var filter = {
-        rules: [{ field: "Tags", operator: "EQUAL", value: itemTags.replace(',',' ') }]
-    }
+
 	
     var relatedtemplate = Handlebars.compile($('#related-template').html());
 
