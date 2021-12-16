@@ -57,9 +57,5 @@
 
     });
 	
-	function getYear(_date){
-		
-		
-	}
 	
 }(jQuery));
