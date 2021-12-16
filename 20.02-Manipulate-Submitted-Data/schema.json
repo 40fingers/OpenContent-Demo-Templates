@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "ModuleTitle": {
+      "type": "string",
+      "title": "Title"
+    },
+    "Text": {
+      "type": "string",
+      "title": "Text"
+    },
+    "Date": {
+      "title": "Date"
+    },
+    "Year": {
+      "type": "string",
+      "title": "Year (don't edit)"
+    }
+  }
+}

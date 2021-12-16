@@ -1,0 +1,18 @@
+{
+  "fields": {
+    "ModuleTitle": {
+      "type": "text"
+    },
+    "Text": {
+      "type": "ckeditor",
+      "configset": "basic"
+    },
+    "Date": {
+      "type": "date",
+      "picker": {}
+    },
+    "Year": {
+      "type": "text"
+    }
+  }
+}

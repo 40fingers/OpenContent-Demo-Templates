@@ -1,0 +1,44 @@
+{
+  "formfields": [
+    {
+      "fieldname": "ModuleTitle",
+      "title": "Title",
+      "fieldtype": "text",
+      "advanced": false
+    },
+    {
+      "fieldname": "Text",
+      "title": "Text",
+      "fieldtype": "ckeditor",
+      "ckeditoroptions": {
+        "configset": "basic"
+      },
+      "advanced": false
+    },
+    {
+      "fieldname": "Date",
+      "title": "Date",
+      "fieldtype": "date",
+      "dateoptions": {},
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "index": false,
+      "position": "1col1",
+      "dependencies": []
+    },
+    {
+      "fieldname": "Year",
+      "title": "Year (don't edit)",
+      "fieldtype": "text",
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "multilanguage": false,
+      "index": false,
+      "position": "1col1",
+      "dependencies": []
+    }
+  ],
+  "formtype": "object"
+}
