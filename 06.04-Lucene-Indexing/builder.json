@@ -1,0 +1,89 @@
+{
+  "formfields": [
+    {
+      "fieldname": "Texts",
+      "title": "Texts",
+      "fieldtype": "object",
+      "subfields": [
+        {
+          "fieldname": "Title",
+          "title": "Title",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "multilanguage": false,
+          "index": true,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Text",
+          "title": "Text",
+          "fieldtype": "ckeditor",
+          "ckeditoroptions": {},
+          "advanced": false
+        }
+      ],
+      "advanced": false
+    },
+    {
+      "fieldname": "Address",
+      "title": "Address",
+      "fieldtype": "object",
+      "subfields": [
+        {
+          "fieldname": "Street",
+          "title": "Street",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "Number",
+          "title": "House number",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "City",
+          "title": "City",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "multilanguage": false,
+          "index": true,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Country",
+          "title": "Country",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "multilanguage": false,
+          "index": true,
+          "position": "1col1",
+          "dependencies": []
+        }
+      ],
+      "advanced": false
+    },
+    {
+      "fieldname": "SortIndex",
+      "title": "SortIndex",
+      "fieldtype": "number",
+      "advanced": true,
+      "required": true,
+      "hidden": false,
+      "default": "0",
+      "multilanguage": false,
+      "index": false,
+      "position": "1col1",
+      "dependencies": []
+    }
+  ],
+  "formtype": "object"
+}

@@ -1,0 +1,44 @@
+{
+  "fields": {
+    "Texts": {
+      "indexType": "object",
+      "fields": {
+        "Title": {
+          "indexType": "text",
+          "index": true,
+          "sort": true
+        },
+        "Text": {
+          "indexType": "html"
+        }
+      },
+      "index": true
+    },
+    "Address": {
+      "indexType": "object",
+      "fields": {
+        "Street": {
+          "indexType": "text"
+        },
+        "Number": {
+          "indexType": "text"
+        },
+        "City": {
+          "indexType": "text",
+          "index": true,
+          "sort": true
+        },
+        "Country": {
+          "indexType": "text",
+          "index": true,
+          "sort": true
+        }
+      },
+      "index": true
+    },
+    "SortIndex": {
+      "indexType": "float"
+    }
+  },
+  "index": true
+}

@@ -1,0 +1,35 @@
+{
+  "fields": {
+    "Texts": {
+      "type": "object",
+      "fields": {
+        "Title": {
+          "type": "text"
+        },
+        "Text": {
+          "type": "ckeditor"
+        }
+      }
+    },
+    "Address": {
+      "type": "object",
+      "fields": {
+        "Street": {
+          "type": "text"
+        },
+        "Number": {
+          "type": "text"
+        },
+        "City": {
+          "type": "text"
+        },
+        "Country": {
+          "type": "text"
+        }
+      }
+    },
+    "SortIndex": {
+      "type": "number"
+    }
+  }
+}
