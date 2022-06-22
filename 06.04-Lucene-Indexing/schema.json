@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "Texts": {
+      "type": "object",
+      "title": "Texts",
+      "properties": {
+        "Title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "Text": {
+          "type": "string",
+          "title": "Text"
+        }
+      }
+    },
+    "Address": {
+      "type": "object",
+      "title": "Address",
+      "properties": {
+        "Street": {
+          "type": "string",
+          "title": "Street"
+        },
+        "Number": {
+          "type": "string",
+          "title": "House number"
+        },
+        "City": {
+          "type": "string",
+          "title": "City"
+        },
+        "Country": {
+          "type": "string",
+          "title": "Country"
+        }
+      }
+    },
+    "SortIndex": {
+      "type": "number",
+      "title": "SortIndex",
+      "required": true,
+      "default": "0"
+    }
+  }
+}
