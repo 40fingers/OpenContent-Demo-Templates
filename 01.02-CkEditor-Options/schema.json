@@ -45,6 +45,10 @@
 				"title": "CkEditor Add Plugin",
 				"type": "string"
 			},
+			"CKEditor9": {
+				"title": "CkEditor Clean from Word",
+				"type": "string"
+			},
 			"CKEditor99": {
 				"title": "CkEditor Test",
 				"type": "string"
