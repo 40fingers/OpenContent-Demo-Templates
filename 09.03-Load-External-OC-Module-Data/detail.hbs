@@ -1,0 +1,14 @@
+<div class="oc-external-data detail">
+	<h2>{{Title}}{{#if @root.Context.IsEditable}}{{#unless @root.Settings.SourceDomainName}}<a class="edit-link" href="{{Context.EditUrl}}"><img src="/icons/sigma/Edit_16x16_Gray.png" alt="edit" /></a>{{/unless}}{{/if}}</h2>
+	{{#if Image.url}}
+	<div class="image">
+	<img src="{{@root.Settings.SourceDomainName}}{{Image.url}}" />
+	</div>
+	{{/if}}
+	<div class="text">
+	{{Text}}
+	</div>
+	
+	<hr>
+	<a href="{{Context.MainUrl}}">Back to List</a>
+</div>

@@ -1,0 +1,24 @@
+{
+	"disableEdit": true,
+	"DataSource": "Satrabel.RestApi",
+	"DataSourceConfig": {
+		"listUrl": "https://[PortalAlias]/API/OpenContent/ExternalApi/GetAllItems?apiKey=[APIKey]&tabId=[SourceTabId]&moduleId=[SourceModuleId]",
+		"detailUrl": "https://[PortalAlias]/API/OpenContent/ExternalApi/GetItem?apiKey=[APIKey]&tabId=[SourceTabId]&moduleId=[SourceModuleId]&id={0}",
+		"dataUrl": "https://[PortalAlias]/API/opencontent/OpenContent/ExternalApi/GetData?apiKey=[APIKey]&tabId=[SourceTabId]&moduleId=[SourceModuleId]&scope={0}&key={1}"
+	},
+	"editWitoutPostback": true,
+	"editRole": "",
+	"Index": true,
+	"templates": {
+		"template": {
+			"type": "multiple",
+			"clientSideData": false,
+			"main": {
+				"template": "template.hbs"
+			},
+			"schemaInTemplate": true,
+			"optionsInTemplate": true,
+			"additionalDataInTemplate": true
+		}
+	}
+}
