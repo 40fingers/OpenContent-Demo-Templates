@@ -1,0 +1,28 @@
+{
+	"disableEdit": true,
+	"DataSource": "Satrabel.RestApi",
+	"DataSourceConfig": {
+		"listUrl": "http://dnnmoduletest2.tb.40fdev.me/opencontent/API/OpenContent/ExternalApi/GetAllItems?apiKey=2a42a835-df6b-4a41-83f8-cbb81095b6a9&tabId=43&moduleId=407",
+		"detailUrl": "http://dnnmoduletest2.tb.40fdev.me/opencontent/API/OpenContent/ExternalApi/GetItem?apiKey=2a42a835-df6b-4a41-83f8-cbb81095b6a9&tabId=43&moduleId=407&id={0}",
+		"dataUrl": "http://dnnmoduletest2.tb.40fdev.me/opencontent/API/OpenContent/ExternalApi/GetData?apiKey=2a42a835-df6b-4a41-83f8-cbb81095b6a9&tabId=43&moduleId=407&scope={0}&key={1}"
+	},
+	"editWitoutPostback": true,
+	"editRole": "",
+	"Index": true,
+	"templates": {
+		"template": {
+			"title": "List-Detail",
+			"type": "multiple",
+			"clientSideData": false,
+			"main": {
+				"template": "template.hbs"
+			},
+			"detail": {
+				"template": "detail.hbs"
+			},
+			"schemaInTemplate": true,
+			"optionsInTemplate": true,
+			"additionalDataInTemplate": true
+		}
+	}
+}

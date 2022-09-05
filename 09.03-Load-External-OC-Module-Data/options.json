@@ -1,0 +1,22 @@
+{
+  "fields": {
+    "Title": {
+      "dependencies": {},
+      "type": "text"
+    },
+    "Text": {
+      "multilanguage": true,
+      "dependencies": {},
+      "type": "ckeditor",
+      "configset": "standard"
+    },
+    "Image": {
+      "dependencies": {},
+      "type": "imagebrowser",
+      "overwrite": true,
+      "showCropper": true,
+      "width": 250,
+      "height": 250
+    }
+  }
+}

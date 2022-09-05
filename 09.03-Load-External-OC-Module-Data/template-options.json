@@ -1,0 +1,7 @@
+{
+  "fields": {
+    "SourceDomainName": {
+      "type": "url"
+    }
+  }
+}

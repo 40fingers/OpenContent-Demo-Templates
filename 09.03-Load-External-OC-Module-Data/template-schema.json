@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "SourceDomainName": {
+      "title": "Source Domain Name",
+      "type": "object"
+    }
+  }
+}
