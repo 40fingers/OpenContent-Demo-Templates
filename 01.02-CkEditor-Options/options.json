@@ -107,6 +107,17 @@
 			}
 			
 		},
+		"CKEditor9": {
+			"type": "ckeditor",
+			"ckeditor":{
+				"pasteFromWordPromptCleanup": false,
+				"pasteFromWordRemoveFontStyles": true,
+				"forcePasteAsPlainText": false,
+				"ignoreEmptyParagraph": true,
+				"removeFormatAttributes": true
+			}
+			
+		},	
 		"CKEditor99": {
 			"type": "ckeditor",
 			"ckeditor":{
