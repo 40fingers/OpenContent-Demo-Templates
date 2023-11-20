@@ -1,0 +1,17 @@
+<div class="oc-links">
+	<ul>
+		{{#each Links}}
+		<li>
+		{{#equal Link.Type "Email"}}
+			<a href="mailto:{{Link.Url}}"{{#if NewWindow}} target="_blank"{{/if}}>{{#if Icon}}<span class="icon"><i class="fa {{Icon}}"></i></span>{{/if}}<span class="text">{{Title}}</span></a>
+		{{else}}
+			{{#equal Link.Type "Phone"}}
+				<a href="tel:{{Link.Url}}"{{#if NewWindow}} target="_blank"{{/if}}>{{#if Icon}}<span class="icon"><i class="fa {{Icon}}"></i></span>{{/if}}<span class="text">{{Title}}</span></a>
+			{{else}}
+				<a href="{{Link.Url}}"{{#if NewWindow}} target="_blank"{{/if}}>{{#if Icon}}<span class="icon"><i class="fa {{Icon}}"></i></span>{{/if}}<span class="text">{{Title}}</span></a>
+			{{/equal}}
+		{{/equal}}
+		</li>
+		{{/each}}
+	</ul>
+</div>

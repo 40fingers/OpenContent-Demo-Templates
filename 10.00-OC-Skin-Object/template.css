@@ -1,0 +1,12 @@
+.oc-links{
+	padding: 1em 0;
+}
+.oc-links ul, .oc-links li{
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+.oc-links li i{
+	min-width: 1.5em;
+	text-align: center;
+}
