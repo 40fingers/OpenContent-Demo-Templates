@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "properties": {
+    "Title": {
+      "type": "string",
+      "title": "Footer Title"
+    },
+
+    "Links": {
+      "type": "array",
+      "title": "Links",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "Link": {
+            "type": "object",
+            "title": "Link",
+            "properties": {
+              "Url": {
+                "type": "string",
+                "title": "Url"
+              },
+              "Type": {
+                "type": "string",
+                "title": "Type",
+                "enum": [
+                  "Link",
+                  "Email",
+                  "Phone"
+                ]
+              }
+            }
+          },
+          "NewWindow": {
+            "type": "boolean",
+            "title": "Open in New Window"
+          },
+          "Icon": {
+            "type": "string",
+            "title": "Icon"
+          }
+        }
+      }
+    }
+  }
+}

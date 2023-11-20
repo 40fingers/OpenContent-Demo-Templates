@@ -1,0 +1,51 @@
+{
+  "fields": {
+    "Title": {
+      "type": "mltext"
+    },
+    "Links": {
+      "type": "accordion",
+      "items": {
+        "fields": {
+          "Title": {
+            "type": "text"
+          },
+          "Link": {
+            "type": "object",
+            "fields": {
+              "Url": {
+                "type": "url"
+              },
+              "Type": {
+                "type": "select",
+                "sort": false,
+                "optionLabels": [
+                  "Link",
+                  "Email",
+                  "Phone"
+                ]
+              }
+            }
+          },
+          "NewWindow": {
+            "type": "checkbox"
+          },
+          "Icon": {
+            "type": "icon",
+            "glyphicons": false,
+            "bootstrap": false,
+            "fontawesome": true
+          },
+          "Show": {
+            "type": "checkbox",
+            "sort": false,
+            "optionLabels": [
+              "Header",
+              "Footer"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
