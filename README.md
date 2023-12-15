@@ -1,5 +1,5 @@
 # Open Content Example / Demo Templates for DNN
-A set of DNNCMS Open Content Example Templates to demonstrate available options
+A set of DNNCMS [Open Content](https://opencontent.readme.io/) Example Templates to demonstrate available options
 
 Please note that these templates are only focussed at demonstrating options in [Open Content](https://opencontent.readme.io/).
 
