@@ -1,0 +1,23 @@
+{
+    "editWitoutPostback": true,
+    "index": true,
+
+    "templates": {
+        "template": {
+            "type": "multiple",
+            "title": "List",            
+            "main": {
+                "template": "template.hbs",
+				"partialTemplates": {
+					"imgsrc": {
+						"template": "_partial/imgsrc.hbs"
+					},
+					"newwindow": {
+						"template": "_partial/new-window.hbs"
+					}
+				}
+            }
+        }
+    }
+
+}
