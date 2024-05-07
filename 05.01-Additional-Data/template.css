@@ -1,0 +1,20 @@
+.oc-multiple{
+	margin:0;
+	padding: 0;
+}
+.oc-multiple li{
+	padding: 1em 1em 1.5em;
+	margin: 0 0 1.5em;
+	background:#eee;
+	list-style:none;
+}
+
+.oc-multiple .meta-data{
+	padding-top:1em;
+	border-top:solid 1px #888;
+	color: #888;
+}
+
+.oc-multiple .oc-title{
+	margin-top: 0.3em;
+}

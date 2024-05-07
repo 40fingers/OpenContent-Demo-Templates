@@ -1,0 +1,15 @@
+{
+  "type": "accordion",
+  "items": {
+    "type": "object",
+    "fields": {
+      "Title": {
+        "type": "text"
+      },
+      "Id": {
+        "type": "guid",
+        "hidden": true
+      }
+    }
+  }
+}

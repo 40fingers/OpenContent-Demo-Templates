@@ -1,0 +1,15 @@
+<ul class="oc-multiple oc-additional-data">
+	{{#each Items}}
+	<li>
+		<h2 class="oc-title">{{Title}} {{#if Context.IsEditable}}<a class="edit-link" href="{{Context.EditUrl}}"><img
+					src="/icons/sigma/Edit_16x16_Gray.png" alt="edit" /></a>{{/if}}</h2>
+		<div class="text">
+			{{Text}}
+		</div>
+		<div class="meta-data">
+			<div class="type">Type: {{#each Type}}{{Title}}{{/each}}</div>
+			<div class="categories">Categories: {{#each Categories}}{{Title}} {{/each}}</div>
+		</div>
+	</li>
+	{{/each}}
+</ul>
