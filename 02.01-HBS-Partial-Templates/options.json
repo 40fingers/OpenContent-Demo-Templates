@@ -1,0 +1,16 @@
+{
+  "fields": {
+    "Title": {
+      "type": "text"
+    },
+    "Text": {
+      "type": "ckeditor"
+    },
+	"Image": {
+      "type": "imagex"
+    },
+    "SortIndex": {
+      "type": "number"
+    }
+  }
+}
