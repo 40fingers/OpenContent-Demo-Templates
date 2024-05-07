@@ -1,4 +1,4 @@
-.oc-multiple *{
+.oc-single *{
 	box-sizing: border-box;
 	
 }
@@ -13,7 +13,7 @@
 	background: #f4f4f4;
 	margin-bottom: 2em;
 }
-.oc-multiple .oc-title{
+.oc-single .oc-title{
 	margin-top:0;
 	color: #d00;
 }

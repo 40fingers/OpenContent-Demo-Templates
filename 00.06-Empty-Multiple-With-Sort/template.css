@@ -8,6 +8,7 @@
 }
 
 .oc-multiple .oc-item-inner{
+	
 	padding: 2em 1em;
 	text-align: center;
 	background: #f4f4f4;
@@ -16,4 +17,22 @@
 .oc-multiple .oc-title{
 	margin-top:0;
 	color: #d00;
+}
+
+.sorthandle{
+	background: #fff;
+	border:solid 1px #ddd;
+	display:flex;
+	text-align:left;
+	padding: 0.3em;
+
+}
+
+.oc-block-count{
+flex-grow: 1;
+
+}
+
+.sorthandle img{
+	border: none;
 }
