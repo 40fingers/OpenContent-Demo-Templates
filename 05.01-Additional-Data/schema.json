@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "Title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "Text": {
+      "type": "string",
+      "title": "Text"
+    },
+	 "Categories": {
+      "type": "array",
+      "title": "Categories"
+    },
+    "Type": {
+      "type": "string",
+      "title": "Type (single)"
+    },
+    "SortIndex": {
+      "type": "number",
+      "title": "SortIndex",
+      "required": true,
+      "default": "0"
+    }
+  }
+}

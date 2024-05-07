@@ -1,0 +1,26 @@
+{
+    "editWitoutPostback": true,
+    "index": true,
+    "templates": {
+        "template": {
+            "type": "multiple",
+            "title": "List",
+            "main": {
+                "template": "template.hbs",
+                "clientSideData": false
+            }
+        }
+    },
+    "additionalData": {
+        "Categories": {
+            "title": "Categories",
+            "storageKey": "Categories",
+            "modelKey": "Categories"
+        },
+        "Type": {
+            "title": "Type",
+            "storageKey": "Type",
+            "modelKey": "Type"
+        }
+    }
+}
