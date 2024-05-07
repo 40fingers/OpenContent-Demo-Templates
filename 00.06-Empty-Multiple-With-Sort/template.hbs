@@ -1,0 +1,34 @@
+{{#if Context.IsEditable}}
+{{registerscript "../_Shared/sort/js/Sortable.min.js"}}
+{{registerscript "../_Shared/sort/js/Open-Content-Sort.js"}}
+{{/if}}
+
+<div class="oc-multiple oc-list sortableList" data-moduleid="{{Context.ModuleId}}">  
+  {{#each Items}}
+  <div class="oc-item" data-id="{{Context.Id}}">
+            {{#if Context.IsEditable}}
+            <div class="sorthandle">
+               <span class="oc-block-count">order-{{SortIndex}}</span>
+               <a class="oc-edit-link" href="{{Context.EditUrl}}"><img src="/icons/sigma/Edit_16x16_Gray.png" alt="edit" /></a>
+               <span class="oc-drag-order" aria-hidden="true"
+                  style="cursor: move;cursor: -webkit-grabbing;"><img src="/icons/sigma/DragDrop_15x15_Standard.png" alt="edit" /></span>
+
+                  
+            </div>
+         {{/if}}
+   
+  <div class="oc-item-inner">
+
+        {{#if Title}}
+        <h3 class="oc-title">{{Title}}</h3>
+        {{/if}}
+		{{#if Text}}
+		<div class="oc-text">
+		{{Text}}
+		</div>
+		{{/if}}
+         
+      </div>          	
+      </div>          	
+   {{/each}}
+</div>
