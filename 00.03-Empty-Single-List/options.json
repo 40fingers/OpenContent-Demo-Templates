@@ -1,11 +1,17 @@
 {
   "fields": {
-    "ModuleTitle": {
-      "type": "text"
-    },
-    "Text": {
-      "type": "ckeditor",
-      "configset": "basic"
+    "Items": {
+      "type": "array",
+      "items": {
+        "fields": {
+          "Title": {
+            "type": "text"
+          },
+          "Text": {
+            "type": "textarea"
+          }
+        }
+      }
     }
   }
 }

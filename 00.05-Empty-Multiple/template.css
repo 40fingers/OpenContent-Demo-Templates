@@ -1,10 +1,16 @@
-.oc-multiple{
-	margin:0;
-	padding: 0;
+.oc-multiple *{
+	box-sizing: border-box;
+	
 }
-.oc-multiple li{
-	padding: 0.1em 0.7em;
-	margin: 0 0 1em;
-	background:#eee;
-	list-style:none;
+
+.oc-multiple .oc-item-inner{
+	max-width: 500px;
+	padding: 2em 1em;
+	text-align: center;
+	background: #f4f4f4;
+	margin-bottom: 2em;
+}
+.oc-multiple .oc-title{
+	margin-top:0;
+	color: #d00;
 }
