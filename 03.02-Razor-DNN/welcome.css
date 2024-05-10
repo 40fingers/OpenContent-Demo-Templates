@@ -1,0 +1,62 @@
+.oc-dnn-attributes, .oc-dnn-attributes *{
+	box-sizing: border-box
+}
+.oc-dnn-attributes h3{
+	
+	font-style: italic;
+}
+
+.oc-dnn-attributes blockquote {
+    font-family: Georgia, serif;
+    position: relative;
+    margin: 0.5em 0;
+	
+    padding: 0.5em 0 0.8em;
+	display:flex;
+	align-items: center;
+	background: #eee;
+	color: #444;
+	padding: 3em;
+}
+
+.oc-dnn-attributes blockquote  p{
+	margin-bottom: 0;
+}
+	
+.oc-dnn-attributes	blockquote {
+	
+
+}
+
+.oc-dnn-attributes blockquote:before {
+	display:inline-block;
+	line-height: 1;
+    font-size: 8rem;
+    content: "\201C";
+
+}
+.oc-dnn-attributes blockquote:after {
+   display:inline-block;
+   line-height: 0.1em;
+    font-size:8rem;
+   content: "\201D";
+   padding-right: 1rem;
+   align-self:flex-end;
+}
+
+.oc-dnn-attributes	blockquote .text{
+flex-grow: 1;
+padding: 0 2em;	
+text-align:center;
+font-size: 2em;
+color: #d00;
+line-height: 110%
+}
+
+.oc-dnn-attributes	blockquote .text h3{
+	font-size: 1.2rem;
+	color: #000;
+}
+
+	
+

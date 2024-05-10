@@ -1,0 +1,53 @@
+@inherits Satrabel.OpenContent.Components.OpenContentWebPage
+
+
+@{
+   bool isEdit = Model.Context.IsEditable;
+
+   if (isEdit)
+   {
+      RegisterScript("../_Shared/sort/js/Sortable.min.js");
+      RegisterScript("../_Shared/sort/js/Open-Content-Sort.js");
+   }
+
+
+}
+
+
+<div class="oc-multiple oc-list sortableList" data-moduleid="@Model.Context.ModuleId">
+   @foreach (var i in Model.Items)
+   {
+      <div class="oc-item" data-id="{{Context.Id}}">
+         @if (isEdit)
+         {
+            <div class="sorthandle">
+               <span class="oc-block-count">order-@i.SortIndex</span>
+               <a class="oc-edit-link" href="@Model.Context.EditUrl"><img src="/icons/sigma/Edit_16x16_Gray.png"
+                     alt="edit" /></a>
+               <span class="oc-drag-order" aria-hidden="true" style="cursor: move;cursor: -webkit-grabbing;"><img
+                     src="/icons/sigma/DragDrop_15x15_Standard.png" alt="edit" /></span>
+            </div>
+         }
+         <div class="oc-item-inner">
+
+            @if (i.Title != null && i.Title != "")
+            {
+               <h3 class="oc-title">@i.Title</h3>
+            }
+            @if (i.Text != null && i.Text != "")
+            {
+               <div class="oc-text">
+                  @i.Text
+               </div>
+            }
+         </div>
+      </div>
+   }
+
+
+</div>
+
+
+@*
+@ObjectInfo.Print(Model)
+*@
