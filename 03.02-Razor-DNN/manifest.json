@@ -1,0 +1,16 @@
+{
+    "editWitoutPostback": true,
+    "index": true,
+
+    "templates": {
+        "template": {
+            "type": "single",
+            "title": "Welcome User",            
+            "main": {
+                "template": "welcome.cshtml",
+				"clientSideData": false
+            }
+        }
+    }
+
+}
