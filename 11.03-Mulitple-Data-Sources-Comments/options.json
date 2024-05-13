@@ -1,0 +1,42 @@
+{
+  "fields": {
+   
+    "Title": {
+      "type": "text"
+    },
+    "Description": {
+      "type": "ckeditor"
+    }, 
+	"Summary": {
+      "type": "textarea"
+    },
+    "Image": {
+      "type": "imagex",
+      "helper": "Url of the image"
+    },
+    "publishstartdate": {
+      "type": "date",
+      "picker": {
+        "format": "DD/MM/YYYY",
+        "minDate": "2000-01-01",
+        "maxDate": "2099-12-31"
+      }
+    },
+    "publishenddate": {
+      "type": "date",
+      "picker": {
+        "format": "DD/MM/YYYY",
+        "minDate": "2000-01-01",
+        "maxDate": "2099-12-31"
+      }
+    },
+    "publishstatus": {
+      "type": "select",
+      "sort": false,
+      "optionLabels": [
+        "draft",
+        "published"
+      ]
+    }
+  }
+}

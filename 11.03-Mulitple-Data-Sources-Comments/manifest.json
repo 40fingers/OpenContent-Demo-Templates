@@ -1,0 +1,36 @@
+{
+    "editWitoutPostback": true,
+    "editRole": "",
+    "Index": true,
+    "detailMetaTitle": "{{#if Seo.MetaTitle}}{{Seo.MetaTitle}}{{else}}{{Title}}{{/if}}",
+    "detailMetaDescription": "{{#if Seo.MetaDescription}}{{Seo.MetaDescription}}{{else}}{{Description}}{{/if}}",
+    "detailUrl": "{{Category.Title}}-{{#if Seo.Slug}}{{Seo.Slug}}{{else}}{{Title}}{{/if}}",
+    "detailMeta": "{{#if Image}}<meta property=\"og:image\" content=\"{{Image}}\" />{{/if}}<meta property=\"og:type\" content=\"article\" />",
+    "templates": {
+        "template": {
+            "type": "multiple", 
+            "title": "List",
+            "clientSideData": true,
+            "main": {
+                "template": "template.hbs",
+                "partialTemplates": {
+                    "item": {
+                        "template": "item.hbs",
+                        "clientside": true
+                    }
+                },
+                "schemaInTemplate": true,
+                "optionsInTemplate": true,
+                "additionalDataInTemplate": true
+            },
+            "detail": {
+                "template": "detail.hbs",
+               
+                "schemaInTemplate": true,
+                "optionsInTemplate": true,
+                "additionalDataInTemplate": true
+            }
+
+        }
+    }
+}

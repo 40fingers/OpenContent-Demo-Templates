@@ -1,0 +1,30 @@
+{{registerstylesheet "/DesktopModules/OpenContent/css/font-awesome/css/font-awesome.css"}}
+
+<section class="oc-hbs-client-side oc-cs-detail">
+  
+       
+        <header class="caption col-md-7">
+          <h2 class="title">{{Title}}</h2>
+		  </header>
+		  <article>
+         <div class="oc-image">
+		 <img src="{{Image.url}}" alt="" title="{{Title}}" />
+		 </div>
+		 <div class="oc-text">
+			<div class="oc-date">
+			  <i class="fa fa-calendar" aria-hidden="true"></i>
+			  {{formatDateTime publishstartdate "dd/MM/yyyy" "nl-NL" }}
+		  </div>
+          <div class="description">
+            {{Description}}
+          </div>
+          </div>
+		  </article>
+
+
+	  <footer>
+		<div class="col-md-12">
+		  <a class="dnnPrimaryAction"href="{{Context.MainUrl}}" class="btn btn-default">&laquo; Return to list</a>
+		</div>
+	  </footer>
+</section>

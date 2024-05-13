@@ -1,0 +1,13 @@
+{
+  "fields": {
+    "Name": {
+      "type": "text"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Message": {
+      "type": "textarea"
+    }
+  }
+}
