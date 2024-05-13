@@ -1,0 +1,10 @@
+{
+  "fields": {
+    "ReadMoreText": {
+      "type": "mltext"
+    },
+    "BackToListText": {
+      "type": "mltext"
+    }
+  }
+}

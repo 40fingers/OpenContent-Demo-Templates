@@ -1,0 +1,24 @@
+{
+    "editWitoutPostback": true,
+    "index": true,
+
+    "templates": {
+        "template": {
+            "type": "multiple",
+            "title": "List",            
+            "main": {
+                "template": "template.hbs",
+				"clientSideData": false
+            },
+			"detail": {
+                "template": "detail.hbs",
+				"clientSideData": false
+            },
+			"images": {
+                "template": "images.hbs",
+				"clientSideData": false
+            }
+        }
+    }
+
+}

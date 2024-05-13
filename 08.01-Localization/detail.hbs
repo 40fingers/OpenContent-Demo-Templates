@@ -1,0 +1,26 @@
+<div class="oc-detail">
+            {{#if Context.IsEditable}}
+            <div class="sorthandle">
+               <a class="oc-edit-link" href="{{Context.EditUrl}}"><img src="/icons/sigma/Edit_16x16_Gray.png" alt="edit" /></a>
+            </div>
+         {{/if}}
+   
+  <article class="oc-detail-item">
+		{{#if Image.url}}
+		<img src="{{Image.url}}" alt="{{Title}}" />
+		{{/if}}
+        {{#if Title}}
+        <h1 class="oc-title">{{Title}}</h1>
+		{{else}}
+		 <h1 class="oc-title">{{Localization.NotTranslation}}</h1>
+        {{/if}}
+		{{#if Text}}
+		<div class="oc-text">
+		{{Text}}
+		</div>
+		{{/if}}
+		
+      </article>          	
+      </div>    
+
+<a class="dnnPrimaryAction" href="{{Context.MainUrl}}">{{#if @root.Settings.BackToListText}}{{@root.Settings.BackToListText}}{{else}}{{@root.Localization.BackToListText}}{{/if}} &raquo;</a>
