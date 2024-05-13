@@ -1,0 +1,16 @@
+{
+  "fields": {
+    "Title": {
+      "type": "mltext"
+    },
+    "Text": {
+      "type": "mlckeditor"
+    },    
+	"Image": {
+      "type": "imagex"
+    },
+    "SortIndex": {
+      "type": "number"
+    }
+  }
+}
