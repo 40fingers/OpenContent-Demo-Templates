@@ -1,0 +1,119 @@
+/* General */
+.oc-hbs-client-side, .oc-hbs-client-side * {
+	box-sizing: border-box;
+}
+
+/* jplist */
+.jplist-panel .text-filter-box{
+	margin-bottom: 1em;
+	
+}
+
+.jplist-pagination, .jplist-pagination li{
+		list-style-type: none;
+}
+
+.jplist-pagination{
+	display:flex; 
+}
+.jplist-pagination li a{
+	display:inline-block;
+	padding: 0.5em 1em;
+	margin-right: 0.5em;
+	border: solid 1px currentColor;
+}.jplist-pagination li.disabled a{
+color: #444;
+}
+
+.jplist-pagination li a:hover{
+	background: #eee;
+
+}
+
+/* List Template */
+.oc-cs-list article{
+	background: #eee;
+	padding: 1em 0;
+	margin: 1em;
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.oc-cs-list article .oc-image{
+	display:block;
+	width: 300px;
+	height: 300px;
+		overflow:hidden;
+	padding: 1em;
+}
+
+.oc-cs-list article .oc-image img{
+	background: #fff;
+	object-fit: contain;
+	width: 100%;
+	height:100% !important;
+	border: none;
+	margin: 0;
+
+	transition: transform 0.5s;
+	
+}
+
+.oc-cs-list article .oc-image:hover img{
+	 transform: scale(0.95)
+}
+
+.oc-cs-list article .oc-text{
+	padding: 0 1em;
+	
+	
+}
+
+@media screen and (min-width: 768px){
+	.oc-cs-list article .oc-text{
+	width: calc(100% - 320px);
+	}
+}
+
+.oc-cs-list article .oc-desc{
+	margin-bottom: 1em;
+}
+
+/* Detail Template */
+.oc-cs-detail article{
+	
+}
+
+
+.oc-cs-detail article .oc-image{
+	padding: 1em 0;
+	
+}
+
+.oc-cs-detail article .oc-image img{
+	margin:0;
+}
+
+.oc-cs-detail article .oc-date{
+	margin-bottom: 1em;
+	color: #666;
+}
+
+
+@media screen and (min-width: 768px){
+	
+	.oc-cs-detail article{
+	display:flex;
+	}
+
+	.oc-cs-detail article .oc-image{
+		order: 2;
+		width: 33%;
+		flex-shrink: 0;
+		padding: 0 0 0 2em;
+	}
+	.oc-cs-detail article .oc-text{
+
+	}
+}
+
