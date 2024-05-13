@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "Email": {
+      "type": "string",
+      "title": "Email"
+    },
+    "Phone": {
+      "type": "string",
+      "title": "Phone"
+    },
+    "Message": {
+      "type": "string",
+      "title": "Message"
+    },
+    "itemId": {
+      "type": "string",
+      "title": "itemId"
+    },
+    "itemTitle": {
+      "type": "string",
+      "title": "itemTitle"
+    },
+    "approved": {
+      "type": "boolean",
+      "title": "approved"
+    }
+  }
+}

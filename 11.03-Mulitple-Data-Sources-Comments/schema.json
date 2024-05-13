@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "properties": {
+   
+    "Title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "Description": {
+      "type": "string",
+      "title": "Description"
+    }, 
+	"Summary": {
+      "type": "string",
+      "title": "Summary (list)"
+    },
+    "Image": {
+      "type": "string",
+      "title": "Main Image"
+    },
+    "publishstartdate": {
+      "title": "Publish Start Date",
+      "required": true,
+      "default": "today"
+    },
+    "publishenddate": {
+      "title": "Publish End Date",
+      "required": true,
+      "default": "2099-12-31"
+    },
+    "publishstatus": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "draft",
+        "published"
+      ],
+      "default": "draft",
+      "required": true
+    }
+  }
+}

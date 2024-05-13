@@ -1,0 +1,37 @@
+{
+  "formfields": [
+    {
+      "fieldname": "Name",
+      "title": "Name",
+      "fieldtype": "text",
+      "advanced": true,
+      "required": true,
+      "hidden": false,
+      "multilanguage": false,
+      "position": "1col1",
+      "dependencies": []
+    },
+    {
+      "fieldname": "Email",
+      "title": "Email",
+      "fieldtype": "email",
+      "advanced": true,
+      "required": true,
+      "hidden": false,
+      "position": "1col1",
+      "dependencies": []
+    },
+    {
+      "fieldname": "Message",
+      "title": "Message",
+      "fieldtype": "textarea",
+      "advanced": true,
+      "required": true,
+      "hidden": false,
+      "multilanguage": false,
+      "position": "1col1",
+      "dependencies": []
+    }
+  ],
+  "formtype": "object"
+}
