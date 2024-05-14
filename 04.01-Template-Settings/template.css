@@ -28,3 +28,21 @@
 .oc-template-settings .bg-col-3 {
 	background: #f4f4f4;
 }
+
+.sorthandle{
+	background: #fff;
+	border:solid 1px #ddd;
+	display:flex;
+	text-align:left;
+	padding: 0.3em;
+
+}
+
+.oc-block-count{
+flex-grow: 1;
+
+}
+
+.sorthandle img{
+	border: none;
+}
