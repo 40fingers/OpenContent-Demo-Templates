@@ -3,11 +3,11 @@
 	
 }
 
-.oc-multiple .oc-item{
+.oc-single .oc-item{
 	max-width: 500px;
 }
 
-.oc-multiple .oc-item-inner{
+.oc-single .oc-item-inner{
 	padding: 2em 1em;
 	text-align: center;
 	background: #f4f4f4;

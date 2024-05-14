@@ -1,0 +1,30 @@
+.oc-template-settings .oc-header {
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+.oc-template-settings .oc-title {
+	color: #d00;
+}
+
+.oc-template-settings .oc-intro {
+	padding: 0 5vw;
+}
+
+.oc-template-settings .bg-col {
+	padding: 1em;
+	min-height: 100%;
+	position: relative;
+}
+
+.oc-template-settings .bg-col-1 {
+	background: #ffe8e8;
+}
+
+.oc-template-settings .bg-col-2 {
+	background: #e8f3ff;
+}
+
+.oc-template-settings .bg-col-3 {
+	background: #f4f4f4;
+}

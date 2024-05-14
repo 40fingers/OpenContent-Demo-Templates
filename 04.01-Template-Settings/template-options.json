@@ -1,0 +1,42 @@
+{
+	"fields": {
+		"Texts": {
+			"fields": {
+				"Intro": {
+			"type": "ckeditor"
+		}
+			}
+		}
+		,
+		"Style": {
+			"fields": {
+				"Item": {
+					"fields": {
+						"Width": {
+							"type": "select",
+							"optionLabels": [
+								"100%",
+								"50%",
+								"33%",
+								"25%"
+							],
+							"removeDefaultNone": false,
+							"sort": false
+						},
+						"BgColor": {
+							"type": "select",
+							"optionLabels": [
+								"Color 1",
+								"Color 2",
+								"Grey"
+							],
+							"removeDefaultNone": false,
+							"sort": false
+						}
+					}
+				}
+				
+			}
+		}
+	}
+}

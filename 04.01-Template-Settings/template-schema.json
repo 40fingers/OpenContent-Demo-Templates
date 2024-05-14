@@ -1,0 +1,52 @@
+{
+	"type": "object",
+	"properties": {
+		"Texts": {
+			"type": "object",
+			"title": "Texts",
+			"properties": {
+				
+				"Title": {
+					"type": "string",
+					"title": "Title above content"
+				},
+				"Intro": {
+					"title": "Intro Text above content",
+					"type": "string"
+					}
+			}
+		},
+		"Style": {
+			"type": "object",
+			"title": "Styling",
+			"properties": {
+				"Item": {
+					"type": "object",
+					"title": "Item",
+					"properties": {
+						"Width": {
+							"title": "Item Width",
+							"type": "string",
+							"enum": [
+								"c24-24",
+								"c24-12",
+								"c24-8",
+								"c24-6"
+							],
+							"default" : "c-24-24"
+						},
+						"BgColor": {
+							"title": "Module Background Colour",
+							"type": "string",
+							"enum": [
+								"bg-col bg-col-1",
+								"bg-col bg-col-2",
+								"bg-col bg-col-3"
+							]
+						}
+					}
+				}
+			}
+		}
+	}
+}
