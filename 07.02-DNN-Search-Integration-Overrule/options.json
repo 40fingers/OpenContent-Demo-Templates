@@ -1,0 +1,26 @@
+{
+  "fields": {
+    "Title": {
+      "type": "text"
+    },
+    "Text": {
+      "type": "ckeditor"
+    },   
+    "Summary": {
+      "type": "textarea"
+    },  	
+	"DNNSearch": {
+		"fields": {
+			"Summary": {
+				"type": "text"
+			},
+			"Keywords": {
+				"type": "text"
+			}
+		}
+	},
+    "SortIndex": {
+      "type": "number"
+    }
+  }
+}

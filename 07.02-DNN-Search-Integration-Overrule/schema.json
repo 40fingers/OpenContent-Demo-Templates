@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    "Title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "Text": {
+      "type": "string",
+      "title": "Text"
+    },
+	"Summary": {
+      "type": "string",
+	  "title": "Summary for List"
+    },
+   "DNNSearch": {
+			"type": "object",
+			"title": "DNN Search Indexer",
+			"properties": {
+        "Title": {
+					"type": "string",
+					"title": "Title passed to DNN Search"
+				},
+				"Summary": {
+					"type": "string",
+					"title": "Summary passed to DNN Search"
+				},
+				"Keywords": {
+					"title": "Overule Text being indexed with keywords",
+					"type": "string"
+				}
+			}
+	},
+    "SortIndex": {
+      "type": "number",
+      "title": "SortIndex",
+      "required": true,
+      "default": "0"
+    }
+  }
+}
