@@ -1,9 +1,18 @@
-
+.oc-multiple .oc-item{
+	aspect-ratio: 1/1;
+	
+}
 .oc-multiple .oc-item-inner{
 	padding: 2em 1em;
 	text-align: center;
 	background: #f4f4f4;
 	margin-bottom: 2em;
+	display:flex;
+	flex-direction: column;
+	min-height: 50%;
+	align-items: center;
+	justify-content: center;
+	
 }
 .oc-multiple .oc-title{
 	margin:0 0 1rem;
