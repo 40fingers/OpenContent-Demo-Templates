@@ -5,7 +5,7 @@
 
 <div class="oc-multiple oc-list sortableList cols" data-moduleid="{{Context.ModuleId}}">
    {{#each Items}}
-   <div class="oc-item c24-6" data-id="{{Context.Id}}">
+   <div class="oc-item c24-8" data-id="{{Context.Id}}">
       {{#if Context.IsEditable}}
       <div class="sorthandle">
          <span class="oc-block-count">order-{{SortIndex}}</span>
@@ -21,9 +21,9 @@
       <div class="oc-item-inner">
          <a class="oc-detail-link" href="{{Context.DetailUrl}}">
             {{#if Title}}
-            <h3 class="oc-title">{{Title}}</h3>
+            <h2 class="oc-title">{{Title}}</h2>
             {{else}}
-            <h3 class="oc-title">No title</h3>
+            <h2 class="oc-title oc-title-false">No title</h2>
             {{/if}}
 
          </a>
