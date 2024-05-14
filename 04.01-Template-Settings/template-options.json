@@ -3,11 +3,10 @@
 		"Texts": {
 			"fields": {
 				"Intro": {
-			"type": "ckeditor"
-		}
+					"type": "ckeditor"
+				}
 			}
-		}
-		,
+		},
 		"Style": {
 			"fields": {
 				"Item": {
@@ -35,7 +34,6 @@
 						}
 					}
 				}
-				
 			}
 		}
 	}

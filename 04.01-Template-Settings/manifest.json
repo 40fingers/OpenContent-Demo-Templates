@@ -1,16 +1,14 @@
 {
     "editWitoutPostback": true,
     "index": true,
-
     "templates": {
         "template": {
             "type": "multiple",
-            "title": "List",            
+            "title": "List",
             "main": {
                 "template": "template.hbs",
-				"clientSideData": false
+                "clientSideData": false
             }
         }
     }
-
 }

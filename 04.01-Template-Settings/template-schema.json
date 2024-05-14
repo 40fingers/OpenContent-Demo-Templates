@@ -5,7 +5,6 @@
 			"type": "object",
 			"title": "Texts",
 			"properties": {
-				
 				"Title": {
 					"type": "string",
 					"title": "Title above content"
@@ -13,7 +12,7 @@
 				"Intro": {
 					"title": "Intro Text above content",
 					"type": "string"
-					}
+				}
 			}
 		},
 		"Style": {
@@ -33,7 +32,7 @@
 								"c24-8",
 								"c24-6"
 							],
-							"default" : "c-24-24"
+							"default": "c-24-24"
 						},
 						"BgColor": {
 							"title": "Module Background Colour",
