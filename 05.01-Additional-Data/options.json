@@ -23,7 +23,7 @@
         "action": "LookupData",
         "data": {
           "dataKey": "Type",
-          "valueField": "id",
+          "valueField": "Id",
           "textField": "Title"
         }
       }
