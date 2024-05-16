@@ -43,10 +43,7 @@
         }
       }
     },
-    "Tags": {
-      "type": "text"
-    },
-   
+    
     "publishstartdate": {
       "type": "date",
       "picker": {

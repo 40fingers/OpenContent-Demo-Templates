@@ -1,7 +1,7 @@
 {{registerform "bootstrap"}}
-	
+
 <article id="article-detail" class="oc-articles detail" data-listpage="{{Context.MainUrl}}">
-	
+
 	<header>
 		{{#if Context.IsEditMode}}
 		<div class="editBar">
@@ -11,116 +11,110 @@
 		{{/if}}
 		<h1 class="title">{{Title}}</h1>
 	</header>
-	
+
 	<section class="container">
 		{{Text}}
 	</section>
 
-    <footer>
-        
-					{{#if Categories}}
-						<div class="categories">
-						<h3>Categories</h3> 
-							<ul>
-							{{#each Categories}}
-								<li>
-									<a href="{{@root.Context.MainUrl}}#Categories:pathGroup={{Id}}">{{Title}}</a>
-								</li>
-							{{/each}}
-							</ul>
-						</div>
-					{{/if}}
-					{{#if Tags}}
-					<div class="tags">
-					Tags: <span id="tags">{{Tags}}</span>
-					</div>
-					{{/if}}
-				</div>
-				<div class="col-12 col-md-6">
-					<div class="more text-right">
-						<a href="{{@root.Context.MainUrl}}" class="btn btn-primary">Back to List</a>
-					</div>
-				</div>
+	<footer>
 
-                <div class="col-12 col-lg-8">
-					<h3>Related Items{{#if Context.IsEditMode}}*{{/if}}</h3>
-					
-					<div class="row related" id="related-items"></div>
-					{{#if Context.IsEditMode}}<h6> *) Based on Categories (AND)</h6>{{/if}}
-				</div>
-				
-				
+		{{#if Categories}}
+		<div class="categories">
+			<h3>Categories</h3>
+			<ul>
+				{{#each Categories}}
+				<li>
+					<a href="{{@root.Context.MainUrl}}#Categories:pathGroup={{Id}}">{{Title}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		{{/if}}
+		</div>
+		<div class="col-12 col-md-6">
+			<div class="more text-right">
+				<a href="{{@root.Context.MainUrl}}" class="btn btn-primary">Back to List</a>
+			</div>
+		</div>
 
-        </section>
-    </footer>
+		<div class="col-12 col-lg-8">
+			<h3>Related Items{{#if Context.IsEditMode}}*{{/if}}</h3>
+
+			<div class="row related" id="related-items"></div>
+			{{#if Context.IsEditMode}}<h6> *) Based on Categories (AND)</h6>{{/if}}
+		</div>
+
+
+
+		</section>
+	</footer>
 </article>
 
 <script>
 
-jQuery(".flexslider").after(jQuery("[id$=View_pDemo]"));
 
-var  strAfterResponse = 
-$(document).ready(function () {
-    var moduleId = {{@root.Context.ModuleId}};
-    var itemId = "{{@root.Context.Id}}";
-	
+	var strAfterResponse =
+		$(document).ready(function () {
+			var moduleId = {{@root.Context.ModuleId
+		}};
+	var itemId = "{{@root.Context.Id}}";
+
 	// Name of the field to filter on.
 	var filterField = "Categories"
-	
+
 	// Get Categories Array.
-	var categories = {{convertToJson Categories}};
-	
+	var categories = {{ convertToJson Categories }};
+
 	let myRules = new Array();
-	
-	// Fill the rules Array
-	categories.forEach(function(item, index){
-		var rule = {field: filterField, operator: "EQUAL"}
+
+	// Fill the rules Array for Lucene Filtering
+	categories.forEach(function (item, index) {
+		var rule = { field: filterField, operator: "EQUAL" }
 		rule.value = item.Id;
-		
+
 		myRules.push(rule);
 	});
-	
-	// console.log(myRules);
+
+	console.log(myRules);
 
 	// Create the filter
 	// Please note that this filter will use AND for the array, so related will match all Categories passed.
 	// There's currently no implementation to tell OC to use other Boolean operators for this filter array.
 	// If you need an OR filter you can get the filtered data one by one (separate API calls) and do your own processing afterwards.
-	
-	 var filter = {
-        rules: myRules
-    }
-	
 
-    var sf = $.ServicesFramework(moduleId);
+	var filter = {
+		rules: myRules
+	}
 
-    
+
+	var sf = $.ServicesFramework(moduleId);
+
+
 	// Get the related items
 
 	var api = new $.openContentRestApiV2(sf);
 
 
-	
-    var relatedtemplate = Handlebars.compile($('#related-template').html());
 
-    
+	var relatedtemplate = Handlebars.compile($('#related-template').html());
 
-    api.getAll('Items', 0, 5, filter, null, function (data) {
-        // success
-        
+
+
+	api.getAll('Items', 0, 5, filter, null, function (data) {
+		// success
+
 		// Mark the current item (to exclude)
-		for (var i=0 ; i < data.Items.length ; i++)
-		{
-			if(itemId == data.Items[i].Context.Id){
+		for (var i = 0; i < data.Items.length; i++) {
+			if (itemId == data.Items[i].Context.Id) {
 				data.Items[i].Context.Current = true;
 			}
 		}
-		
-        $('#related-items').html(relatedtemplate(data));
-    }, function () {
-        // fail
 
-    });									 
+		$('#related-items').html(relatedtemplate(data));
+	}, function () {
+		// fail
+
+	});									 
 });
 
 

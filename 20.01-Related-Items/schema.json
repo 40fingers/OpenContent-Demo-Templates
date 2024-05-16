@@ -15,10 +15,7 @@
       "type": "array",
       "title": "Categories"
     },
-    "Tags": {
-      "type": "string",
-      "title": "Tags"
-    },
+    
     "publishstartdate": {
       "title": "Publish Start Date",
       "required": true,
