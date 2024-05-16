@@ -1,0 +1,63 @@
+<div class="oc-tables oc-table-simple">
+    {{#if ModuleTitle}}
+    <h2>{{ModuleTitle}}</h2>
+    {{/if}}
+    {{#if Intro}}
+    <div class="oc-intro">
+        {{Intro}}
+    </div>
+    {{/if}}
+    <table class="oc-table">
+        {{#each Rows}}
+        {{#if @first}}
+        <thead>
+            <tr>
+                <th>
+                    {{Cell1.Text}}
+                </th>
+                <th>
+                    {{Cell2.Text}}
+                </th>
+                <th>
+                    {{Cell3.Text}}
+                </th>
+                <th>
+                    {{Cell4.Text}}
+                </th>
+                <th>
+                    {{Cell5.Text}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{else}}
+
+            <tr>
+                <td>
+                    {{Cell1.Text}}
+                </td>
+                <td>
+                    {{Cell2.Text}}
+                </td>
+                <td>
+                    {{Cell3.Text}}
+                </td>
+                <td>
+                    {{Cell4.Text}}
+                </td>
+                <td>
+                    {{Cell5.Text}}
+                </td>
+
+            </tr>
+            {{#if @last}}
+        </tbody>
+
+
+        {{/if}}
+
+        {{/if}}
+        {{/each}}
+
+    </table>
+</div>

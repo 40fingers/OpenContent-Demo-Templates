@@ -1,0 +1,143 @@
+{
+  "fields": {
+    "ModuleTitle": {
+      "type": "text"
+    },
+    "Intro": {
+      "type": "ckeditor"
+    },
+    "Rows": {
+      "type": "table",
+      "items": {
+        "fields": {
+          "Cell1": {
+            "type": "object",
+            "fields": {
+              "Text": {
+                "type": "ckeditor",
+                "ckeditor": {
+                  "height": 75,
+                  "toolbar": [
+                    {
+                      "name": "text",
+                      "items": [
+                        "NumberedList",
+                        "BulletedList",
+                        "Link",
+                        "Unlink",
+                        "RemoveFormat"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Cell2": {
+            "type": "object",
+            "fields": {
+              "Text": {
+                "type": "ckeditor",
+                "ckeditor": {
+                  "height": 75,
+                  "toolbar": [
+                    {
+                      "name": "text",
+                      "items": [
+                        "NumberedList",
+                        "BulletedList",
+                        "Link",
+                        "Unlink",
+                        "RemoveFormat"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Cell3": {
+            "type": "object",
+            "fields": {
+              "Text": {
+                "type": "ckeditor",
+                "ckeditor": {
+                  "height": 75,
+                  "toolbar": [
+                    {
+                      "name": "text",
+                      "items": [
+                        "NumberedList",
+                        "BulletedList",
+                        "Link",
+                        "Unlink",
+                        "RemoveFormat"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "CellStyle": {
+                "type": "select2",
+                "dataService": {
+                  "action": "LookupData",
+                  "data": {
+                    "dataKey": "CellStyle",
+                    "valueField": "Id",
+                    "textField": "Name"
+                  }
+                }
+              }
+            }
+          },
+          "Cell4": {
+            "type": "object",
+            "fields": {
+              "Text": {
+                "type": "ckeditor",
+                "ckeditor": {
+                  "height": 75,
+                  "toolbar": [
+                    {
+                      "name": "text",
+                      "items": [
+                        "NumberedList",
+                        "BulletedList",
+                        "Link",
+                        "Unlink",
+                        "RemoveFormat"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Cell5": {
+            "type": "object",
+            "fields": {
+              "Text": {
+                "type": "ckeditor",
+                "ckeditor": {
+                  "height": 75,
+                  "toolbar": [
+                    {
+                      "name": "text",
+                      "items": [
+                        "NumberedList",
+                        "BulletedList",
+                        "Link",
+                        "Unlink",
+                        "RemoveFormat"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
