@@ -1,0 +1,18 @@
+.oc-table-simple .oc-table {
+
+    min-width: 100%;
+}
+
+.oc-table-simple .oc-table td {
+    width: 20%;
+}
+
+.oc-table-simple .oc-table th {
+
+    font-weight: bold;
+}
+
+.oc-table-simple .oc-table td p,
+.oc-table-simple .oc-table th p {
+    margin-bottom: 0;
+}

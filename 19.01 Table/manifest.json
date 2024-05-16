@@ -1,0 +1,19 @@
+{
+    "editWitoutPostback": true,
+    "index": true,
+    "detailMetaTitle": "{{Title}}",
+    "detailMetaDescription": "{{Intro}}",
+    "detailUrl": "{{Title}}",
+    "templates": {
+        "grid": {
+            "type": "single",
+            "title": "table",
+            "main": {
+                "template": "table.hbs",
+                "clientSideData": false,
+                "dnnsearch": true,
+                "additionalDataInTemplate": true
+            }
+        }
+    }
+}
