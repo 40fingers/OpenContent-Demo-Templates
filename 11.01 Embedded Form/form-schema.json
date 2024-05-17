@@ -3,18 +3,19 @@
   "properties": {
     "Name": {
       "type": "string",
-      "title": "Name",
-      "required": true
+      "title": "Name"
     },
     "Email": {
       "type": "string",
-      "title": "Email",
-      "required": true
+      "title": "Email"
+    },
+    "Phone": {
+      "type": "string",
+      "title": "Phone"
     },
     "Message": {
       "type": "string",
-      "title": "Message",
-      "required": true
+      "title": "Message"
     }
   }
 }
