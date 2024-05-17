@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "ImagexDefault": {
+      "type": "string",
+      "title": "ImageX Default"
+    },
+    "ImagexSimple": {
+      "type": "string",
+      "title": "Imagex Simple"
+    },
+    "ImageXNoUpload": {
+      "type": "string",
+      "title": "Image no Upload"
+    },
+    "ImageXFolderAndSize": {
+      "type": "string",
+      "title": "ImageX Set Folder"
+    },
+    "ImageXCrop": {
+      "type": "string",
+      "title": "ImageX Cropper"
+    },
+    "ImageXCropFile": {
+      "type": "string",
+      "title": "ImageX Cropper Create File"
+    }
+  }
+}

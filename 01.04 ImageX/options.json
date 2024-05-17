@@ -1,0 +1,66 @@
+{
+  "fields": {
+    "ImagexDefault": {
+      "type": "imagex",
+      "uploadhidden": false,
+      "fileExtensions": "gif|jpg|jpeg|tiff|png",
+      "fileMaxSize": 2000000,
+      "showOverwrite": true,
+      "overwrite": false,
+      "showCropper": true,
+      "saveCropFile": true,
+      "width": 2000,
+      "height": 1500
+    },
+    "ImagexSimple": {
+      "type": "imagex",
+      "uploadhidden": false,
+      "showOverwrite": false,
+      "showCropper": false
+    },
+    "ImageXNoUpload": {
+      "type": "imagex",
+      "uploadhidden": true,
+      "uploadfolder": "Images",
+      "showOverwrite": false,
+      "showCropper": false
+    },
+    "ImageXFolderAndSize": {
+      "type": "imagex",
+      "uploadhidden": false,
+      "uploadfolder": "Images/custom",
+      "fileExtensions": "gif|jpg|jpeg|tiff|png",
+      "fileMaxSize": 2097152,
+      "showOverwrite": true,
+      "overwrite": false,
+      "showCropper": false
+    },
+    "ImageXCrop": {
+      "type": "imagex",
+      "uploadhidden": false,
+      "uploadfolder": "Images",
+      "fileExtensions": "gif|jpg|jpeg|tiff|png",
+      "fileMaxSize": 2000000,
+      "showOverwrite": true,
+      "overwrite": false,
+      "showCropper": true,
+      "saveCropFile": false,
+      "width": 600,
+      "height": 600
+    },
+    "ImageXCropFile": {
+      "type": "imagex",
+      "uploadhidden": false,
+      "uploadfolder": "Images/Full",
+      "fileExtensions": "gif|jpg|jpeg|tiff|png",
+      "fileMaxSize": 2000000,
+      "showOverwrite": true,
+      "overwrite": false,
+      "showCropper": true,
+      "cropfolder": "Images/Cropped",
+      "saveCropFile": true,
+      "width": 600,
+      "height": 400
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "parent": "dnnbootstrap-edit-horizontal",
+  "layout": {
+    "template": "<div><div class=\"row\"><div class=\"col-md-12\" id=\"pos_1_1\"></div></div></div>",
+    "bindings": {
+      "ImagexDefault": "#pos_1_1",
+      "ImagexSimple": "#pos_1_1",
+      "ImageXNoUpload": "#pos_1_1",
+      "ImageXFolderAndSize": "#pos_1_1",
+      "ImageXCrop": "#pos_1_1",
+      "ImageXCropFile": "#pos_1_1"
+    }
+  }
+}
