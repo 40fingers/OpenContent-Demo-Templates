@@ -1,0 +1,38 @@
+.oc-multiple .oc-item{
+}
+.oc-multiple .oc-item-inner{
+	padding: 2em 1em;
+	background: #f4f4f4;
+	margin-bottom: 2em;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+}
+.oc-multiple .oc-title{
+	margin:0 0 1rem;
+	color: #d00;
+
+
+}.oc-multiple .oc-buttons{
+	margin:1rem 0 0 ;
+	text-align:right;
+}
+
+.sorthandle{
+	background: #fff;
+	border:solid 1px #ddd;
+	display:flex;
+	text-align:left;
+	padding: 0.3em;
+
+}
+
+.oc-block-count{
+flex-grow: 1;
+
+}
+
+.sorthandle img{
+	border: none;
+}

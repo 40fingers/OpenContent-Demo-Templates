@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "Title": {
+            "type": "string",
+            "title": "Search Title",
+            "required": true
+        },
+        "Text": {
+            "type": "string",
+            "title": "Search Text",
+            "required": true
+        },
+        "Summary": {
+            "type": "string",
+            "title": "Search Summay"
+        },
+        "Url": {
+            "type": "string",
+            "title": "Search Rasult Url",
+            "required": true
+        },
+        "SortIndex": {
+            "type": "number",
+            "title": "SortIndex",
+            "required": true,
+            "default": "0"
+        }
+    }
+}
