@@ -1,6 +1,8 @@
 {{registerform}}
 
-<div class="oc-detail" data-moduleid="{{Context.ModuleId}}" data-id="{{Context.Id}}" data-title="{{Title}}">
+{{registerstylesheet "template.css"}}
+
+<div class="oc-embedded-form oc-detail" data-moduleid="{{Context.ModuleId}}" data-id="{{Context.Id}}" data-title="{{Title}}">
             {{#if Context.IsEditable}}
             <div class="sorthandle">
               
@@ -22,11 +24,13 @@
 		{{/if}}
 		
        <div class="contactform"></div>
-       <button type="button" class="btn btn-primary" id="submit-{{Context.ModuleId}}">Submit</button>
+       <button type="button" class="oc-button-submit dnnPrimaryAction" id="submit-{{Context.ModuleId}}">Submit</button>
       </article>          	
       </div>    
+<div class="oc-buttons">
+<a class="dnnSecondaryAction" href="{{Context.MainUrl}}">Back to list</a>
+</div>
 
-<a class="dnnPrimaryAction" href="{{Context.MainUrl}}">Back to list</a>
 
 
 <script>
