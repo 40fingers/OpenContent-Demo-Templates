@@ -1,0 +1,18 @@
+{
+  "fields": {
+
+          "Title": {
+            "type": "text"
+          },
+          "Text": {
+            "type": "textarea"
+          },
+		  "Summary": {
+            "type": "textarea"
+          },
+		  "Url": {
+            "type": "text"
+          }
+        }
+ 
+}
