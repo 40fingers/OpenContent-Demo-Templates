@@ -1,0 +1,97 @@
+{
+  "formfields": [
+    {
+      "fieldname": "ImagexDefault",
+      "title": "ImageX Default",
+      "fieldtype": "imagex",
+      "imagexoptions": {
+        "uploadhidden": false,
+        "fileExtensions": "gif|jpg|jpeg|tiff|png",
+        "fileMaxSize": 2000000,
+        "showOverwrite": true,
+        "overwrite": false,
+        "showCropper": true,
+        "saveCropFile": true,
+        "width": 2000,
+        "height": 1500
+      },
+      "advanced": false
+    },
+    {
+      "fieldname": "ImagexSimple",
+      "title": "Imagex Simple",
+      "fieldtype": "imagex",
+      "imagexoptions": {
+        "uploadhidden": false,
+        "showOverwrite": false,
+        "showCropper": false
+      },
+      "advanced": false
+    },
+    {
+      "fieldname": "ImageXNoUpload",
+      "title": "Image no Upload",
+      "fieldtype": "imagex",
+      "imagexoptions": {
+        "uploadhidden": true,
+        "uploadfolder": "Images",
+        "showOverwrite": false,
+        "showCropper": false
+      },
+      "advanced": false
+    },
+    {
+      "fieldname": "ImageXFolderAndSize",
+      "title": "ImageX Set Folder",
+      "fieldtype": "imagex",
+      "imagexoptions": {
+        "uploadhidden": false,
+        "uploadfolder": "Images/custom",
+        "fileExtensions": "gif|jpg|jpeg|tiff|png",
+        "fileMaxSize": 2097152,
+        "showOverwrite": true,
+        "overwrite": false,
+        "showCropper": false
+      },
+      "advanced": false
+    },
+    {
+      "fieldname": "ImageXCrop",
+      "title": "ImageX Cropper",
+      "fieldtype": "imagex",
+      "imagexoptions": {
+        "uploadhidden": false,
+        "uploadfolder": "Images",
+        "fileExtensions": "gif|jpg|jpeg|tiff|png",
+        "fileMaxSize": 2000000,
+        "showOverwrite": true,
+        "overwrite": false,
+        "showCropper": true,
+        "saveCropFile": false,
+        "width": 600,
+        "height": 600
+      },
+      "advanced": false
+    },
+    {
+      "fieldname": "ImageXCropFile",
+      "title": "ImageX Cropper Create File",
+      "fieldtype": "imagex",
+      "imagexoptions": {
+        "uploadhidden": false,
+        "uploadfolder": "Images/Full",
+        "fileExtensions": "gif|jpg|jpeg|tiff|png",
+        "fileMaxSize": 2000000,
+        "showOverwrite": true,
+        "overwrite": false,
+        "showCropper": true,
+        "cropfolder": "Images/Cropped",
+        "saveCropFile": true,
+        "width": 600,
+        "height": 400
+      },
+      "advanced": false
+    }
+  ],
+  "formtype": "object"
+}
