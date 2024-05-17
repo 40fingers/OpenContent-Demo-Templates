@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "ModuleTitle": {
+      "type": "string",
+      "title": "Title"
+    },
+    "Intro": {
+      "type": "string",
+      "title": "Intro Text"
+    },
+    "Rows": {
+      "type": "array",
+      "title": "Rows",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Cell1": {
+            "type": "object",
+            "title": "1",
+            "properties": {
+              "Text": {
+                "type": "string",
+                "title": "Text"
+              }
+            }
+          },
+          "Cell2": {
+            "type": "object",
+            "title": "2",
+            "properties": {
+              "Text": {
+                "type": "string",
+                "title": "Text"
+              }
+            }
+          },
+          "Cell3": {
+            "type": "object",
+            "title": "3",
+            "properties": {
+              "Text": {
+                "type": "string",
+                "title": "Text"
+              }
+            }
+          },
+          "Cell4": {
+            "type": "object",
+            "title": "4",
+            "properties": {
+              "Text": {
+                "type": "string",
+                "title": "Text"
+              }
+            }
+          },
+          "Cell5": {
+            "type": "object",
+            "title": "5",
+            "properties": {
+              "Text": {
+                "type": "string",
+                "title": "Text"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
