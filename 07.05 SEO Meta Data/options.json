@@ -1,0 +1,25 @@
+{
+  "fields": {
+    "Title": {
+      "type": "text"
+    },
+    "Text": {
+      "type": "ckeditor"
+    },
+    "Image": {
+      "type": "imagex",
+      "uploadhidden": false,
+      "fileExtensions": "gif|jpg|jpeg|tiff|png",
+      "fileMaxSize": 5000000,
+      "showOverwrite": true,
+      "overwrite": false,
+      "showCropper": true,
+      "saveCropFile": true,
+      "width": 500,
+      "height": 500
+    },
+    "SortIndex": {
+      "type": "number"
+    }
+  }
+}
