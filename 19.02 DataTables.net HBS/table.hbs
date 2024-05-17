@@ -1,0 +1,135 @@
+{{RegisterStyleSheet "https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"}}
+{{ RegisterScript "//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"}}
+{{ RegisterScript "//cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"}}
+{{ RegisterScript "//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"}}
+{{ RegisterScript "//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"}}
+{{ RegisterScript "//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"}}
+{{ RegisterScript "//cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"}}
+{{ RegisterScript "//cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"}}
+
+<div class="oc-tables oc-datatables">
+    {{#if ModuleTitle}}
+    <h2>{{ModuleTitle}}</h2>
+    {{/if}}
+    {{#if Intro}}
+    <div class="oc-intro">
+        {{Intro}}
+    </div>
+    {{/if}}
+    <table class="oc-table" id="oc-datatablenet-{{Context.ModuleID}}">
+        {{#each Rows}}
+        {{#if @first}}
+        <thead>
+            <tr>
+                <th>
+                    {{Cell1.Text}}
+                </th>
+                <th>
+                    {{Cell2.Text}}
+                </th>
+                <th>
+                    {{Cell3.Text}}
+                </th>
+                <th>
+                    {{Cell4.Text}}
+                </th>
+                <th>
+                    {{Cell5.Text}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{else}}
+
+            <tr>
+                <td>
+                    {{Cell1.Text}}
+                </td>
+                <td>
+                    {{Cell2.Text}}
+                </td>
+                <td>
+                    {{Cell3.Text}}
+                </td>
+                <td>
+                    {{Cell4.Text}}
+                </td>
+                <td>
+                    {{Cell5.Text}}
+                </td>
+
+            </tr>
+            {{#if @last}}
+        </tbody>
+
+
+        {{/if}}
+
+        {{/if}}
+        {{/each}}
+
+    </table>
+</div>
+
+ <script>
+
+    
+
+    $(document).ready(function () 
+    {
+      $('#oc-datatablenet-{{Context.ModuleID}}').DataTable(
+        {
+          "scrollX": true,
+        "sScrollXInner": "100%",
+        dom: 'Bfrtip',
+        buttons: [
+          {
+            extend: 'copy',
+            title: 'Export {{ModuleTitle}}' ,
+            text: 'Copy Data',
+           
+          },
+          {
+            extend: 'csv',
+            title: 'CSV Export {{ModuleTitle}}'
+            
+          },
+          {
+            extend: 'excel',
+            title: 'Excel Export {{ModuleTitle}}'
+           
+          },
+          {
+            extend: 'pdf',
+            title: 'PDF Export {{ModuleTitle}}',
+			orientation: "landscape",
+			customize: function(doc) {
+			
+				  doc.styles.title.alignment = 'left';
+				  doc.styles.title.color = '#dd0000';
+				  doc.styles.title.fontSize = 12;
+				  
+				  doc.defaultStyle.fontSize = 8; 
+				  doc.styles.tableHeader.fontSize = 8; 
+				  doc.styles.tableHeader.margin = [5, 3, 5, 3]; 
+				  doc.styles.tableHeader.alignment = 'left'; 
+				  doc.styles.tableHeader.color = '#ffffff'; 
+				  doc.styles.tableHeader.fillColor = '#dd0000'; 
+				  
+				  doc.styles.tableBodyEven.margin = [5, 3, 5, 3]; 
+				  doc.styles.tableBodyOdd.margin = [5, 3, 5, 3]; 
+			   }  
+            
+          },
+          {
+            extend: 'print',
+            title: '@exportTitleFor Print  @exportTitleBy'
+          }
+        ],
+        "pageLength": 500,
+        "scrollX" : true
+      });
+    });
+
+
+  </script>

@@ -1,0 +1,24 @@
+.oc-datatables .oc-table {
+
+    min-width: 100%;
+}
+
+.oc-datatables .oc-table td {
+    width: 20%;
+}
+
+.oc-datatables .oc-table th {
+
+    font-weight: bold;
+    color: #d00;
+}
+
+.oc-datatables .oc-table td p,
+.oc-datatables .oc-table th p {
+    margin-bottom: 0;
+}
+
+
+.oc-datatables .dataTables_filter{
+    margin-bottom: 1em;
+}

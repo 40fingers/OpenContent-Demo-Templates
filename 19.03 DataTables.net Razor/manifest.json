@@ -1,0 +1,34 @@
+{
+  "editWitoutPostback": true,
+  "index": false,
+  "editRole": "",
+  "disableEdit": true,
+  "title": "DataTables.net",
+  "templates": {
+    "template": {
+      "type": "single",
+      "title": "DNN Pages",
+      "clientSideData": false,
+      "main": {
+        "template": "pages.cshtml",
+        
+        "schemaInTemplate": false,
+        "optionsInTemplate": false,
+        "additionalDataInTemplate": false
+      }
+    },
+    "template2": {
+      "type": "single",
+      "title": "SQL Query",
+      "clientSideData": false,
+      "main": {
+        "template": "sql.cshtml",
+        
+        "schemaInTemplate": false,
+        "optionsInTemplate": false,
+        "additionalDataInTemplate": false
+      }
+    }
+  }
+
+}
