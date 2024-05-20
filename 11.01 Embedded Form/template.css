@@ -15,13 +15,13 @@
 }
 
 .oc-embedded-form .oc-title {
-	margin: 0;
 	color: #d00;
 }
-
-.oc-embedded-form .oc-button-submit{
-	margin-top: 0.5em !important;
+.oc-embedded-form .oc-list .oc-title {
+	margin: 0;
 }
+
+
 
 .sorthandle {
 	background: #fff;
@@ -30,6 +30,11 @@
 	text-align: left;
 	padding: 0.3em;
 
+}
+
+.oc-embedded-form .oc-button-submit {
+	margin-top: 0.5em !important;
+	margin-left: 11.5em;
 }
 
 .contactform .control-label {
