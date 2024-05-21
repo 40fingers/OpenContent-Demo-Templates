@@ -5,22 +5,22 @@
     "templates": {
         "template": {
             "type": "multiple",
-            "title": "List",            
+            "title": "List",
             "main": {
                 "template": "template.hbs",
-				"dnnsearch": true,
-                 "dnnSearchTitle": "{{Title}}",
-                 "dnnSearchDescription": "Article: {{#if Summary}}{{Summary}}{{else}}{{truncateWords Text 20}}{{/if}}",
-                 "dnnSearchText": "{{convertHtmlToText Text}}",
-				"clientSideData": false
+                "dnnsearch": true,
+                "dnnSearchTitle": "{{Title}}",
+                "dnnSearchDescription": "Article: {{#if Summary}}{{Summary}}{{else}}{{truncateWords Text 20}}{{/if}}",
+                "dnnSearchText": "{{convertHtmlToText Text}}",
+                "clientSideData": false
             },
-			"detail": {
+            "detail": {
                 "template": "detail.hbs",
-				"clientSideData": false
+                "clientSideData": false
             },
-			"images": {
+            "images": {
                 "template": "images.hbs",
-				"clientSideData": false
+                "clientSideData": false
             }
         }
     }

@@ -23,10 +23,6 @@
 	margin-bottom: 0;
 }
 	
-.oc-dnn-attributes	blockquote {
-	
-
-}
 
 .oc-dnn-attributes blockquote:before {
 	display:inline-block;
@@ -53,9 +49,15 @@ color: #d00;
 line-height: 110%
 }
 
-.oc-dnn-attributes	blockquote .text h3{
-	font-size: 1.2rem;
+.oc-dnn-attributes	blockquote .oc-title{
+	font-size: 1.4rem;
 	color: #000;
+}
+
+.oc-dnn-attributes	blockquote .oc-title-bottom{
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    color: #888;
 }
 
 	

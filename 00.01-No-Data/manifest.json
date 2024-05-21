@@ -1,0 +1,24 @@
+{
+    "editWitoutPostback": true,
+    "index": false,
+
+    "templates": {
+        "template": {
+            "type": "single",
+            "title": "Change Colors",            
+            "main": {
+                "template": "template.hbs",
+				"clientSideData": false
+            }
+        },
+		 "video2023": {
+            "type": "single",
+            "title": "Video 2023",            
+            "main": {
+                "template": "2023.hbs",
+				"clientSideData": false
+            }
+        }
+    }
+
+}
