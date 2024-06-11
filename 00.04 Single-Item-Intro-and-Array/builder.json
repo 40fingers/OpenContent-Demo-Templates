@@ -1,0 +1,40 @@
+{
+  "formfields": [
+    {
+      "fieldname": "ModuleTitle",
+      "title": "Title",
+      "fieldtype": "text",
+      "advanced": false
+    },
+    {
+      "fieldname": "Intro",
+      "title": "Intro text",
+      "fieldtype": "textarea",
+      "advanced": false
+    },
+    {
+      "fieldname": "Blocks",
+      "title": "Blocks",
+      "fieldtype": "accordion",
+      "subfields": [
+        {
+          "fieldname": "Title",
+          "title": "Title",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "Text",
+          "title": "Text",
+          "fieldtype": "ckeditor",
+          "ckeditoroptions": {
+            "configset": "basic"
+          },
+          "advanced": false
+        }
+      ],
+      "advanced": false
+    }
+  ],
+  "formtype": "object"
+}

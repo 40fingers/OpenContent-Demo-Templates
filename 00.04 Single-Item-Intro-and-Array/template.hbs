@@ -1,0 +1,30 @@
+<div class="oc-single oc-list oc-intro-blocks">
+	<div class="oc-intro">
+		{{#if ModuleTitle}}
+		<h2 class="oc-intro-title">{{ModuleTitle}}</h2>
+		{{/if}}
+		{{#if Intro}}
+		<div class="oc-intro-text">
+		{{Intro}}
+		</div>
+		{{/if}}
+	</div>
+
+	<div class="oc-items">
+	   {{#each Blocks}}
+	   <div class="oc-item">
+		  <div class="oc-item-inner">
+			 {{#if Title}}
+			 <h3 class="oc-title">{{Title}}</h3>
+			 {{/if}}
+			 {{#if Text}}
+			 <div class="oc-text">
+				{{Text}}
+			 </div>
+			 {{/if}}
+
+		  </div>
+	   </div>
+	   {{/each}}
+	</div>
+</div>

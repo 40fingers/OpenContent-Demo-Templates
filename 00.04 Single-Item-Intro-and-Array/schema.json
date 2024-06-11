@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "ModuleTitle": {
+      "type": "string",
+      "title": "Title"
+    },
+    "Intro": {
+      "type": "string",
+      "title": "Intro text"
+    },
+    "Blocks": {
+      "type": "array",
+      "title": "Blocks",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "Text": {
+            "type": "string",
+            "title": "Text"
+          }
+        }
+      }
+    }
+  }
+}

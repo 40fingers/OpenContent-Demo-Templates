@@ -1,0 +1,24 @@
+{
+  "fields": {
+    "ModuleTitle": {
+      "type": "text"
+    },
+    "Intro": {
+      "type": "textarea"
+    },
+    "Blocks": {
+      "type": "accordion",
+      "items": {
+        "fields": {
+          "Title": {
+            "type": "text"
+          },
+          "Text": {
+            "type": "ckeditor",
+            "configset": "basic"
+          }
+        }
+      }
+    }
+  }
+}
