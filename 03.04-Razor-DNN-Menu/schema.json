@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "ModuleTitle": {
+            "title": "Top Title",
+            "type": "string"
+        }
+    }
+}
