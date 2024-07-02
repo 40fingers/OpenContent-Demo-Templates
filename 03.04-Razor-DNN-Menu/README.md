@@ -1,5 +1,7 @@
-Empty Base Template Multiple 
+# Razor DNN Menu Template
+ 
+## Demo of DNNCMS Menu Template(s) using Razor and the DNN API
 
 Example:
 
-![CkEditor Options](template.png "Empty Base Template Multiple Items")
+![Razor DNN Menu Template](template.png "Razor DNN Menu Template")
