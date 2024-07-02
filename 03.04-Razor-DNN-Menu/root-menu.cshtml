@@ -1,0 +1,35 @@
+@using System
+
+@inherits Satrabel.OpenContent.Components.OpenContentWebPage
+
+@{ 
+
+    var tc = new DotNetNuke.Entities.Tabs.TabController();
+    var tpc = new DotNetNuke.Security.Permissions.TabPermissionController();
+    var pid = Dnn.Portal.PortalId;
+	var tabId = Dnn.Tab.TabID;
+    var parentId = -1;
+	
+
+}
+
+
+
+<div class="oc-menu">
+
+
+<ul class="root Level1" style="display: block;">
+		<!-- Loop -->
+    @foreach(var Tab in tc.GetTabsByPortal(pid).WithParentId(parentId)) { 
+        if(Tab.HasBeenPublished && Tab.IsVisible && !Tab.IsDeleted && DotNetNuke.Security.Permissions.TabPermissionController.CanViewPage(Tab)) {
+			string activeClass = "";
+			if (tabId == Tab.TabID){
+				activeClass = "active";
+			}
+            <li class="Level1 Item1 FirstItem NoChildren @activeClass" id=""><a href="@Tab.FullUrl" class="Level1" aria-haspopup="false"><span>@Tab.TabName</span></a></li>
+        }
+    }
+     <!-- End Loop -->
+</ul>
+
+</div>

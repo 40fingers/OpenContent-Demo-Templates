@@ -1,0 +1,8 @@
+{
+    "fields": {
+		"ModuleTitle": {
+            "type":"text",
+			"helper": "Overrules Showing the current Page Name"
+        }
+	}
+}
