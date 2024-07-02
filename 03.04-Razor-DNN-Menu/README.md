@@ -4,4 +4,4 @@
 
 Example:
 
-![Razor DNN Menu Template](template.png "Razor DNN Menu Template")
+![Razor DNN Menu Template](root-menu.png "Razor DNN Root Menu Template")
