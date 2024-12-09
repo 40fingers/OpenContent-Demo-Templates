@@ -1,0 +1,52 @@
+@inherits Satrabel.OpenContent.Components.OpenContentWebPage
+
+
+@{
+   bool isEdit = Model.Context.IsEditable;
+
+   if (isEdit)
+   {
+      RegisterScript("../_Shared/sort/js/Sortable.min.js");
+      RegisterScript("../_Shared/sort/js/Open-Content-Sort.js");
+   }
+
+
+}
+
+
+<div class="oc-multiple oc-list sortableList" data-moduleid="@Model.Context.ModuleId">
+
+
+	@RenderPage("partials/_top-text.cshtml")
+
+
+   @foreach (var i in Model.Items)
+   {
+      <div class="oc-item" data-id="{{Context.Id}}">
+         @if (isEdit)
+         {
+           @RenderPage("partials/_item-edit-bar.cshtml", i)
+         }
+         <div class="oc-item-inner">
+
+            @if (i.Title != null && i.Title != "")
+            {
+               <h3 class="oc-title">@i.Title</h3>
+            }
+            @if (i.Text != null && i.Text != "")
+            {
+               <div class="oc-text">
+                  @i.Text
+               </div>
+            }
+         </div>
+      </div>
+   }
+
+
+</div>
+
+
+@*
+@ObjectInfo.Print(Model)
+*@
