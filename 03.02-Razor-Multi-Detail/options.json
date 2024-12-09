@@ -3,6 +3,9 @@
     "Title": {
       "type": "text"
     },
+	 "ListText": {
+      "type": "textarea"
+    },
     "Text": {
       "type": "ckeditor"
     },

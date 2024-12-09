@@ -3,12 +3,8 @@
 	
 }
 
-.oc-multiple .oc-item{
-	
-}
-
 .oc-multiple .oc-item-inner{
-	
+
 	padding: 2em 1em;
 	text-align: center;
 	background: #f4f4f4;
@@ -35,4 +31,9 @@ flex-grow: 1;
 
 .oc-multiple .sorthandle img{
 	border: none;
+}
+
+.oc-multiple .oc-more{
+	display: inline-block;
+	margin-top: 1em;
 }

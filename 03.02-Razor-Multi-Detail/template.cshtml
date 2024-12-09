@@ -34,12 +34,13 @@
             {
                <h3 class="oc-title">@i.Title</h3>
             }
-            @if (i.Text != null && i.Text != "")
+            @if (i.ListText != null && i.ListText != "")
             {
                <div class="oc-text">
-                  @i.Text
+                  @i.ListText
                </div>
             }
+			<a class="oc-more" href="@i.Context.DetailUrl">Details &raquo;</a>
          </div>
       </div>
    }

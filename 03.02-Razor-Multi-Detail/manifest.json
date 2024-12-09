@@ -1,0 +1,21 @@
+{
+    "editWitoutPostback": true,
+    "index": true,
+
+    "templates": {
+        "template": {
+            "type": "multiple",
+            "title": "List",            
+            "main": {
+                "template": "template.cshtml",
+				"clientSideData": false
+            },
+			"detail": {
+                "template": "detail.cshtml",
+				"clientSideData": false
+            }
+			
+        }
+    }
+
+}
