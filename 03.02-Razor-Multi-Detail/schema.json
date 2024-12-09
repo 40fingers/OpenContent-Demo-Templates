@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "Title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "ListText": {
+      "type": "string",
+      "title": "List Text"
+    },    
+	"Text": {
+      "type": "string",
+      "title": "Detail Text"
+    },
+    "SortIndex": {
+      "type": "number",
+      "title": "SortIndex",
+      "required": true,
+      "default": "0"
+    }
+  }
+}
