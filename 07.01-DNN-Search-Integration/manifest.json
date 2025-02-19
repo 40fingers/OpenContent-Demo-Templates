@@ -12,6 +12,7 @@
                 "dnnSearchTitle": "{{Title}}",
                 "dnnSearchDescription": "Article: {{#if Summary}}{{Summary}}{{else}}{{truncateWords Text 20}}{{/if}}",
                 "dnnSearchText": "{{convertHtmlToText Text}}",
+                "dnnSearchTags": "{{Tags}}",
                 "clientSideData": false
             },
             "detail": {

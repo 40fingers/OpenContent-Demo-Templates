@@ -13,6 +13,10 @@
       "type": "string",
 	  "title": "Summary for List"
     },
+	"Tags": {
+      "type": "string",
+	  "title": "Comma separated Tags"
+    },
     "SortIndex": {
       "type": "number",
       "title": "SortIndex",
