@@ -1,0 +1,66 @@
+@using System
+@inherits Satrabel.OpenContent.Components.OpenContentWebPage
+
+@{
+  RegisterScript("js/dnn-core-search-results.js");
+}
+
+
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+<div class="oc-dnn-search" data-moduleid="{{Context.ModuleId}}">
+  <h2>DNN Search Results</h2>
+  <input id="oc-search-input" class="oc-search-input" aria-label="Search Input" placeholder="Type and press Enter" />
+  <a id="oc-search-button" class="oc-search-button" aria-label="Search Button">search</a>
+  <div id="oc-results" class="oc-results">
+  </div>
+  <div id="oc-json" class="oc-json">
+  </div>
+</div>
+
+<script>
+
+  var searchInput = document.getElementById("oc-search-input");
+  var searchButton = document.getElementById("oc-search-button");
+
+
+  CustomDnnSearch.debugMode = true;
+  CustomDnnSearch.portalAlias = "//@Model.Context.HTTPAlias";
+
+  CustomDnnSearch.resultTemplate = "<h4 class='oc-search-title'>Results:</h4><h5 class='oc-search-hits'>hits: {{results.length}}</h5><ul class='oc-search-results'>{{#each results}}<li class='oc-search-result'><a href='{{DocumentUrl}}'>{{#if Title}}{{Title}}{{else}}* No Title *{{/if}}</a>{{#if Results.[0].Tags.length}}<span class='oc-dnn-search-result-tags'>#{{Results.[0].Tags}}</span>{{/if}}</li>{{/each}}</ul>";
+
+  searchButton.addEventListener("click", function () {
+    doSearch();
+  });
+
+  searchInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevents form submission if inside a form
+      doSearch();
+
+    }
+  });
+
+
+  var doSearch = function () {
+    var input = searchInput;
+    var searchQuery = input.value.trim(); // Get input value and remove extra spaces
+
+    if (searchQuery) {
+      CustomDnnSearch.getDnnSearchResults(searchQuery); // Call your search function
+    } else {
+      CustomDnnSearch.clearDnnSearchResults();
+    }
+
+  }
+
+  let typingTimer; // Timer identifier
+  const typingDelay = 600; // Delay
+
+  document.getElementById("oc-search-input").addEventListener("input", function () {
+    clearTimeout(typingTimer); // Clear the previous timer
+    typingTimer = setTimeout(doSearch, typingDelay); // Set a new timer
+  });
+
+
+</script>
