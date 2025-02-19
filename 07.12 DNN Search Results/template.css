@@ -1,0 +1,20 @@
+.oc-dnn-search .oc-results .oc-search-button{
+	
+	cursor: pointer;
+	
+}
+
+.oc-dnn-search  .oc-json{
+	white-space: pre;
+	padding: 1em;
+	margin: 2em 0 0;
+	background: #f4f4f4;
+}
+
+.oc-dnn-search  .oc-dnn-search-result-tags{
+	display:block;
+}
+
+.oc-dnn-search .oc-search-button{
+	cursor: pointer;
+}

@@ -1,0 +1,14 @@
+{
+    "editWitoutPostback": false,
+    "index": false,
+       "templates": {
+        "template": {
+            "type": "single",
+            "title": "DNN-Search",
+            "main": {
+                "template": "template.cshtml",
+                "clientSideData": false
+            }
+        }
+    }
+}
