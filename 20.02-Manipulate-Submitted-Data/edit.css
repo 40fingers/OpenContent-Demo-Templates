@@ -1,0 +1,13 @@
+.form-group label{
+	font-weight: bold;
+	color: #d00;
+}
+
+.lama-field-Date:before{
+	content:"Enter a date and the Year will be filled automatically!";
+	display:block;
+	font-weight: bold;
+	border-bottom: solid 1px #000;
+	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
+}
