@@ -72,6 +72,38 @@
       "advanced": false
     },
     {
+      "fieldname": "Dates",
+      "title": "Dates",
+      "fieldtype": "object",
+      "subfields": [
+        {
+          "fieldname": "StartDate",
+          "title": "Start Date",
+          "fieldtype": "date",
+          "dateoptions": {},
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "index": true,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "EndDate",
+          "title": "EndDate",
+          "fieldtype": "date",
+          "dateoptions": {},
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "index": true,
+          "position": "1col1",
+          "dependencies": []
+        }
+      ],
+      "advanced": false
+    },
+    {
       "fieldname": "SortIndex",
       "title": "SortIndex",
       "fieldtype": "number",
@@ -80,7 +112,7 @@
       "hidden": false,
       "default": "0",
       "multilanguage": false,
-      "index": false,
+      "index": true,
       "position": "1col1",
       "dependencies": []
     }

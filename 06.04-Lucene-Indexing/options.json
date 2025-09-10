@@ -28,6 +28,19 @@
         }
       }
     },
+    "Dates": {
+      "type": "object",
+      "fields": {
+        "StartDate": {
+          "type": "date",
+          "picker": {}
+        },
+        "EndDate": {
+          "type": "date",
+          "picker": {}
+        }
+      }
+    },
     "SortIndex": {
       "type": "number"
     }
