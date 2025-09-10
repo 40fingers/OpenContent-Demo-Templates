@@ -36,8 +36,26 @@
       },
       "index": true
     },
+    "Dates": {
+      "indexType": "object",
+      "fields": {
+        "StartDate": {
+          "indexType": "datetime",
+          "index": true,
+          "sort": true
+        },
+        "EndDate": {
+          "indexType": "datetime",
+          "index": true,
+          "sort": true
+        }
+      },
+      "index": true
+    },
     "SortIndex": {
-      "indexType": "float"
+      "indexType": "float",
+      "index": true,
+      "sort": true
     }
   },
   "index": true

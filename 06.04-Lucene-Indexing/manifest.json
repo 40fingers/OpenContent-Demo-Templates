@@ -1,6 +1,7 @@
 {
     "editWitoutPostback": true,
     "index": true,
+	"builderVersion": 1,
 
     "templates": {
         "template": {

@@ -37,11 +37,23 @@
         }
       }
     },
+    "Dates": {
+      "type": "object",
+      "title": "Dates",
+      "properties": {
+        "StartDate": {
+          "title": "Start Date"
+        },
+        "EndDate": {
+          "title": "EndDate"
+        }
+      }
+    },
     "SortIndex": {
       "type": "number",
       "title": "SortIndex",
       "required": true,
-      "default": "0"
+      "default": 0
     }
   }
 }
