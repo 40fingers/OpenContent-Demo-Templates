@@ -1,6 +1,7 @@
 {
     "editWitoutPostback": true,
     "editRole": "redactie",
+	"builderVersion": 1,
     "Index": true,
       "templates": {
     "template": {

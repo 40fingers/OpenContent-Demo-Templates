@@ -3,7 +3,7 @@
     "ImagexDefault": {
       "type": "imagex",
       "uploadhidden": false,
-      "fileExtensions": "gif|jpg|jpeg|tiff|png",
+      "fileExtensions": "jpg|jpeg",
       "fileMaxSize": 2000000,
       "showOverwrite": true,
       "overwrite": false,
