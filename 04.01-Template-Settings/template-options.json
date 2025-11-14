@@ -1,11 +1,8 @@
 {
 	"fields": {
-		"Texts": {
-			"fields": {
-				"Intro": {
-					"type": "ckeditor"
-				}
-			}
+
+		"Intro": {
+			"type": "ckeditor"
 		},
 		"Style": {
 			"fields": {

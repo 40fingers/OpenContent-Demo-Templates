@@ -14,8 +14,11 @@
   <a id="oc-search-button" class="oc-search-button" aria-label="Search Button">search</a>
   <div id="oc-results" class="oc-results">
   </div>
+  
+  @if(Model.Context.IsEditMode){
   <div id="oc-json" class="oc-json">
   </div>
+  }
 </div>
 
 <script>

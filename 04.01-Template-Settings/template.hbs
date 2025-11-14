@@ -4,16 +4,16 @@
 {{/if}}
 
 <div class="oc-multiple oc-list oc-template-settings">
-   {{#ifand Settings.Texts.Title Settings.Texts.Intro}}
+   {{#ifor Settings.ModuleTitle Settings.Intro}}
    <header class="oc-header">
-      {{#if Settings.Texts.Title}}
-      <h1 class="oc-title">{{Settings.Texts.Title}}</h1>
+      {{#if Settings.ModuleTitle}}
+      <h1 class="oc-title">{{Settings.ModuleTitle}}</h1>
       {{/if}}
-      {{#if Settings.Texts.Intro}}
-      <div class="oc-intro">{{Settings.Texts.Intro}}</div>
+      {{#if Settings.Intro}}
+      <div class="oc-intro">{{Settings.Intro}}</div>
       {{/if}}
    </header>
-   {{/ifand}}
+   {{/ifor}}
    <div class="cols sortableList" data-moduleid="{{Context.ModuleId}}">
       {{#each Items}}
       <div class="oc-item {{@root.Settings.Style.Item.Width}}" data-id="{{Context.Id}}">

@@ -1,12 +1,21 @@
 {
     "editWitoutPostback": true,
     "index": true,
+		"builderVersion": 1,
     "templates": {
         "template": {
             "type": "multiple",
             "title": "List",
             "main": {
                 "template": "template.hbs",
+                "clientSideData": false
+            }
+        },
+         "titles": {
+            "type": "multiple",
+            "title": "Titles only",
+            "main": {
+                "template": "titles.cshtml",
                 "clientSideData": false
             }
         }

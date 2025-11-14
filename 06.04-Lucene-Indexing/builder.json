@@ -110,7 +110,7 @@
       "advanced": true,
       "required": true,
       "hidden": false,
-      "default": "0",
+      "default": 0,
       "multilanguage": false,
       "index": true,
       "position": "1col1",

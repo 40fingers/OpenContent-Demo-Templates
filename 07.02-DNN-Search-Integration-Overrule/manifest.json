@@ -1,26 +1,26 @@
 {
     "editWitoutPostback": true,
     "index": true,
-
+	"builderVersion": 1,
     "templates": {
         "template": {
             "type": "multiple",
-            "title": "List",            
+            "title": "List",
             "main": {
                 "template": "template.hbs",
-				"dnnsearch": true,
-                 "dnnSearchTitle": "{{#if DNNSearch.Title}}{{DNNSearch.Title}}{{else}}{{Title}}{{/if}}",
-                 "dnnSearchDescription": "{{#if DNNSearch.Summary}}{{DNNSearch.Summary}}{{else}}Product:  {{Summary}}{{/if}}",
-                 "dnnSearchText": "{{#if DNNSearch.KeyWords}}{{DNNSearch.KeyWords}}{{else}}{{Text}}{{/if}}",
-				"clientSideData": false
+                "dnnsearch": true,
+                "dnnSearchTitle": "{{#if DNNSearch.Title}}{{DNNSearch.Title}}{{else}}{{Title}}{{/if}}",
+                "dnnSearchDescription": "{{#if DNNSearch.Summary}}{{DNNSearch.Summary}}{{else}}Product:  {{Summary}}{{/if}}",
+                "dnnSearchText": "{{#if DNNSearch.KeyWords}}{{DNNSearch.KeyWords}}{{else}}{{Text}}{{/if}}",
+                "clientSideData": false
             },
-			"detail": {
+            "detail": {
                 "template": "detail.hbs",
-				"clientSideData": false
+                "clientSideData": false
             },
-			"images": {
+            "images": {
                 "template": "images.hbs",
-				"clientSideData": false
+                "clientSideData": false
             }
         }
     }

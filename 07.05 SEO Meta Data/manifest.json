@@ -1,5 +1,6 @@
 {
-    "editWitoutPostback": true,
+    "builderVersion": 1,
+	"editWitoutPostback": true,
     "index": true,
     "detailMetaTitle": "{{Title}}",
     "detailMetaDescription": "{{convertHtmlToText Text}}",
