@@ -1,0 +1,14 @@
+{
+  "fields": {
+    "ReadMoreText": {
+      "multilanguage": true,
+      "dependencies": {},
+      "type": "text"
+    },
+    "BackToListText": {
+      "multilanguage": true,
+      "dependencies": {},
+      "type": "text"
+    }
+  }
+}
