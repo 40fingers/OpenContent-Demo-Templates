@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "ReadMoreText": {
+      "title": "Read More Button Text",
+      "type": "string"
+    },
+    "BackToListText": {
+      "title": "Back to List Button Text",
+      "type": "string"
+    }
+  }
+}
