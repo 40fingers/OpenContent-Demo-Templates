@@ -1,0 +1,41 @@
+{{#if Context.IsEditable}}
+{{registerscript "../_Shared/sort/js/Sortable.min.js"}}
+{{registerscript "../_Shared/sort/js/Open-Content-Sort.js"}}
+{{/if}}
+
+<div class="oc-multiple oc-list sortableList" data-moduleid="{{Context.ModuleId}}">  
+
+<h2>{{Localization.Intro}}</h2>
+	<ol>
+	<li>{{Localization.Fields}}</li>
+	<li>{{Localization.Labels}}</li>
+	<li>{{Localization.Texts}}</li>
+	<li>{{Localization.Settings}}</li>
+</ol>
+
+  {{#each Items}}
+  <div class="oc-item" data-id="{{Context.Id}}">
+            {{#if Context.IsEditable}}
+            <div class="sorthandle">
+               <span class="oc-block-count">order-{{SortIndex}}</span>
+               <a class="oc-edit-link" href="{{Context.EditUrl}}"><img src="/icons/sigma/Edit_16x16_Gray.png" alt="edit" /></a>
+               <span class="oc-drag-order" aria-hidden="true"
+                  style="cursor: move;cursor: -webkit-grabbing;"><img src="/icons/sigma/DragDrop_15x15_Standard.png" alt="edit" /></span>
+
+                  
+            </div>
+         {{/if}}
+   
+  <div class="oc-item-inner">
+
+        {{#if Title}}
+        <h3 class="oc-title">{{Title}}</h3>
+		{{else}}
+		 <h3 class="oc-title">{{../Localization.NotTranslation}}{{#if Context.IsEditable}} <a class="edit-link" href="{{Context.EditUrl}}"><img src="/icons/sigma/Edit_16x16_Gray.png" alt="edit" /></a>{{/if}}</h3>
+        {{/if}}
+	<a class="oc-detail-link dnnPrimaryAction" href="{{Context.DetailUrl}}">{{#if @root.Settings.ReadMoreText}}{{@root.Settings.ReadMoreText}}{{else}}{{@root.Localization.ReadMoreText}}{{/if}} &raquo;</a>
+         
+      </div>          	
+      </div>          	
+   {{/each}}
+</div>

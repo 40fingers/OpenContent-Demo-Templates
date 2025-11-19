@@ -1,0 +1,22 @@
+{
+  "fields": {
+    "Title": {
+      "multilanguage": true,
+      "dependencies": {},
+      "type": "text"
+    },
+    "Text": {
+      "multilanguage": true,
+      "dependencies": {},
+      "type": "ckeditor",
+      "local": true
+    },
+    "Image": {
+      "dependencies": {},
+      "type": "imagebrowser"
+    },
+    "SortIndex": {
+      "dependencies": {}
+    }
+  }
+}
