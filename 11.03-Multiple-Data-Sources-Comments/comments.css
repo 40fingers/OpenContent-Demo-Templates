@@ -1,0 +1,16 @@
+.table{
+	width: 100%;
+}
+.oc-th-edit{
+	width: 40px;
+}
+.oc-th-title{
+	width: calc(25% - 40px);
+}
+.oc-th-message{
+		width: 50%;
+}
+
+.oc-th-link{
+	width: 25%;
+}

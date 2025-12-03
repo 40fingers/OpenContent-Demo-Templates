@@ -1,104 +1,51 @@
-{{registerscript "jplist/jplist.core.min.js"}}
-{{registerscript "jplist/jplist.filter-toggle-bundle.min.js"}}
-{{registerscript "jplist/jplist.textbox-filter.min.js"}}
-{{registerscript "jplist/jplist.bootstrap-pagination-bundle.min.js"}}
-{{registerscript "jplist/jplist.bootstrap-sort-dropdown.min.js"}}
-{{registerstylesheet "/DesktopModules/OpenContent/css/font-awesome/css/font-awesome.css"}}
+{{registerscript "jplist/js/jplist.core.min.js"}}
+{{registerscript "jplist/js/jplist.filter-toggle-bundle.min.js"}}
+{{registerscript "jplist/js/jplist.textbox-filter.min.js"}}
+{{registerscript "jplist/js/jplist.bootstrap-pagination-bundle.min.js"}}
+{{registerscript "jplist/js/jplist.bootstrap-sort-dropdown.min.js"}}
+{{registerscript "jplist/js/jplist.preloader-control.min.js"}}
 
-{{registerscript "/DesktopModules/OpenContent/js/lib/handlebars/handlebars.js"}}
-{{registerscript "/DesktopModules/OpenContent/js/lib/moment/min/moment.min.js"}}
+{{registerscript "/DesktopModules/OpenContent/js/alpaca-1.5.8/lib/handlebars/handlebars.js"}}
+{{registerscript "/DesktopModules/OpenContent/js/alpaca-1.5.8/lib/moment/min/moment.min.js"}}
+{{registerscript "js/handlebars.helpers.js"}}
 
-<div class="oc-hbs-client-side oc-cs-list">
-    <div id="demo" class="jplist" data-moduleid="{{Context.ModuleId}}">
-        <div class="row">
-            <div class="col-md-3 side-bar">
-                <!-- panel -->
-                <div class="jplist-panel">
-                    <!-- filter by title -->
-                    <div class="text-filter-box form-group">
 
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                                <input data-path=".title" class="form-control textfilter"
-                                    type="text"
-                                    value=""
-                                    placeholder="Filter by Title"
-                                    data-control-type="textbox"
-                                    data-control-name="Title"
-                                    data-control-action="filter"
-                                    data-event-name="keydelay"  />
-                        </div>
-                    </div>
-                    <!-- checkbox filters -->
-                    <div class="jplist-group form-group" data-control-type="checkbox-group-filter"
-                        data-control-action="filter" data-control-name="Category">
-                        {{#each AdditionalData.Categories}}
-                        <div class="checkbox ">
-                            <label for="{{Id}}">
-                                <input data-path="{{Id}}" id="{{Id}}" type="checkbox" />
-                                {{Title}}
-                            </label>
-                        </div>
-                        {{/each}}
-                    </div>
-            </div>
-            <div class="col-md-9">
-                <!-- data -->
-                <div class="list row text-shadow">
-                    Loading...
-                </div>
-            </div>
-        </div>
-        <div class="jplist-panel row">
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-4">
-                        {{#if Settings.ItemsPage}}
-                        <!-- items per page dropdown -->
-                        <div class="dropdown pull-left jplist-items-per-page"
-                            data-control-type="boot-items-per-page-dropdown" data-control-name="paging"
-                            data-control-action="paging">
+<div class="oc-articles oc-articles-list">
+	
+				<div id="demo" class="jplist" data-moduleid="{{Context.ModuleId}}">
+					<div class="row">
+						<aside class="oc-filters">
+							<h4 class="filter">{{@root.Settings.Texts.Filters}}</h4>
+							
+							<!-- panel -->
+							<div id="filters" class="jplist-panel">
+							
+								<!-- filter by title -->
+								<div class="text-filter-box form-group">
 
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                                id="dropdown-menu-1" aria-expanded="true">
-                                <span data-type="selected-text">Items per Page</span>
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdown-menu-1">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-search"></i></span>
+										<input 
+												class="form-control textfilter"
+											   type="text"
+											   value=""
+											   data-path="header" 
+											   placeholder="{{@root.Settings.Texts.SearchText}}"
+											   data-control-type="textbox"
+											   data-control-name="Title,Summary,Tags"
+											   data-control-action="filter",
+											   data-event-name="keydelay" 
+											   />
+									</div>
+								</div>
+							</div>
+							
+							
+						</aside>
 
-                                <li role="presentation">
-                                    <a role="menuitem" tabindex="-1" href="#" data-number="3">3 per page</a>
-                                </li>
-                                <li role="presentation">
-                                    <a role="menuitem" tabindex="-1" href="#" data-number="5" data-default="true">5 per page</a>
-                                </li>
-                                <li role="presentation">
-                                    <a role="menuitem" tabindex="-1" href="#" data-number="10">10 per page</a>
-                                </li>
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation">
-                                    <a role="menuitem" tabindex="-1" href="#" data-number="all">View All</a>
-                                </li>
-                            </ul>
-                        </div>
-                        {{/if}}
-                    </div>
-                    <div class="col-md-8">
-                        <!-- bootstrap pagination control -->
-                        <ul class="pagination pull-left jplist-pagination" data-control-type="boot-pagination"
-                            data-control-name="paging" data-control-action="paging" data-range="8"
-                            data-mode="google-like"></ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                {{#if Settings.CurrentPage}}
-                <!-- pagination info label -->
-                <div class="pull-left jplist-pagination-info"
-                    data-type="<strong>Page {current} of {pages}</strong><br/> <small>{start} - {end} of {all}</small>"
-                    data-control-type="pagination-info" data-control-name="paging" data-control-action="paging"></div>
-                {{/if}}
-            </div>
-        </div>
+							<!-- data -->
+							<div class="oc-article-list list" data-moduleid="{{Context.ModuleId}}">
+							</div>
+					</div>
     </div>
 </div>

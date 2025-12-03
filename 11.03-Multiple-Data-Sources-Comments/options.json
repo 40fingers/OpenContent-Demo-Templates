@@ -1,23 +1,75 @@
 {
   "fields": {
-   
     "Title": {
       "type": "text"
     },
-    "Description": {
-      "type": "ckeditor"
-    }, 
-	"Summary": {
+    "Summary": {
       "type": "textarea"
+     
     },
-    "Image": {
-      "type": "imagex",
-      "helper": "Url of the image"
+    "Text": {
+      "type": "ckeditor",
+      "ckeditor": {
+        "extraPlugins": "youtube,dnnpages",
+        "height": 700,
+        "toolbar": [
+          {
+            "name": "text",
+            "items": [
+              "Bold",
+              "Italic",
+              "Underline",
+              "RemoveFormat"
+            ]
+          },
+          {
+            "name": "style",
+            "items": [
+              "Format"
+            ]
+          },
+          {
+            "name": "layout",
+            "items": [
+              "Table",
+              "NumberedList",
+              "BulletedList",
+              "Outdent",
+              "Indent"
+            ]
+          },
+          {
+            "name": "link",
+            "items": [
+              "Link",
+              "Unlink"
+            ]
+          },
+          {
+            "name": "Img",
+            "items": [
+              "EasyImageUpload",
+              "Youtube"
+            ]
+          },
+          {
+            "name": "Source",
+            "items": [
+              "ShowBlocks",
+              "Source"
+            ]
+          }
+        ],
+        "format_tags": "p;h2;h3;h4;div"
+      }
+    },
+    "Featured": {
+      "type": "checkbox"
     },
     "publishstartdate": {
       "type": "date",
       "picker": {
-        "format": "DD/MM/YYYY",
+        "format": "DD-MM-YYYY HH:mm",
         "minDate": "2000-01-01",
         "maxDate": "2099-12-31"
       }
@@ -25,7 +77,7 @@
     "publishenddate": {
       "type": "date",
       "picker": {
-        "format": "DD/MM/YYYY",
+        "format": "DD-MM-YYYY HH:mm",
         "minDate": "2000-01-01",
         "maxDate": "2099-12-31"
       }

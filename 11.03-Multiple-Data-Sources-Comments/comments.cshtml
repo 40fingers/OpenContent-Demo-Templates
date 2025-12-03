@@ -1,0 +1,146 @@
+@using System.Text.RegularExpressions
+@using System.Web
+@using System.Collections.Generic
+@model dynamic
+
+@functions {
+    // Convert HTML content to plain text (strip tags and decode entities)
+    private static string ConvertHtmlToText(string html)
+    {
+        if (string.IsNullOrEmpty(html)) return string.Empty;
+        var noTags = Regex.Replace(html, "<.*?>", string.Empty);
+        return HttpUtility.HtmlDecode(noTags).Trim();
+    }
+}
+
+@* If the view model's Context.IsEditable is true, render the comment tables *@
+@if (Model != null && Model.Context != null && Model.Context.IsEditable == true)
+{
+    <div class="oc-article-comments">
+        @* Group items by itemId and render a table per article/itemId *@
+        @{ 
+            var groups = new Dictionary<string, List<dynamic>>();
+            if (Model.Items != null)
+            {
+                foreach (var item in Model.Items)
+                {
+                    var id = string.Empty;
+                    if (item != null && item.itemId != null)
+                    {
+                        id = item.itemId.ToString();
+                    }
+
+                    if (!groups.ContainsKey(id))
+                    {
+                        groups[id] = new List<dynamic>();
+                    }
+
+                    groups[id].Add((dynamic)item);
+                }
+            }
+        }
+
+        @if (groups.Count == 0)
+        {
+            <p>No comments found.</p>
+        }
+        else
+        {
+            foreach (var kv in groups)
+            {
+                var itemId = kv.Key ?? string.Empty;
+                var itemsForId = kv.Value;
+                <div class="oc-article-comments">
+                    <h3>Comments for <a href="@(Model.Context.MainUrl + "/id/" + itemId)" target="_blank">Article &raquo;</a></h3>
+                    <table class="table">
+                        <tr>
+                            <th></th>
+                            <th>Approved</th>
+                            <th>Title</th>
+                            <th>Message</th>
+                            <th>Module</th>
+                        </tr>
+
+                        @* Unapproved rows for this itemId *@
+                        @if (itemsForId != null)
+                        {
+                            foreach (var item in itemsForId)
+                            {
+                                var approved = false;
+                                if (item != null && item.approved != null)
+                                {
+                                    if (item.approved is bool)
+                                    {
+                                        approved = (bool)item.approved;
+                                    }
+                                    else if (item.approved is string)
+                                    {
+                                        bool parsed;
+                                        bool.TryParse((string)item.approved, out parsed);
+                                        approved = parsed;
+                                    }
+                                }
+
+                                if (!approved)
+                                {
+                                    var msg = string.Empty;
+                                    if (item != null && item.Message != null)
+                                    {
+                                        msg = item.Message.ToString();
+                                    }
+                                    var hasHtml = msg.IndexOf("<") >= 0;
+                                    <tr class="@(hasHtml ? "contains-html" : "")">
+                                        <td><a href="@item.Context.EditUrl">edit</a></td>
+                                        <td>No</td>
+                                        <td>@(item != null && item.Name != null ? item.Name.ToString() : string.Empty)</td>
+                                        <td>@HttpUtility.HtmlEncode(ConvertHtmlToText(msg))</td>
+                                        <td><a href="@(item.Context.MainUrl + "/id/" + (item != null && item.itemId != null ? item.itemId.ToString() : string.Empty))" target="_blank">Article &raquo;</a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+
+                        @* Approved rows for this itemId *@
+                        @if (itemsForId != null)
+                        {
+                            foreach (var item in itemsForId)
+                            {
+                                var approved = false;
+                                if (item != null && item.approved != null)
+                                {
+                                    if (item.approved is bool)
+                                    {
+                                        approved = (bool)item.approved;
+                                    }
+                                    else if (item.approved is string)
+                                    {
+                                        bool parsed;
+                                        bool.TryParse((string)item.approved, out parsed);
+                                        approved = parsed;
+                                    }
+                                }
+
+                                if (approved)
+                                {
+                                    var msg = string.Empty;
+                                    if (item != null && item.Message != null)
+                                    {
+                                        msg = item.Message.ToString();
+                                    }
+                                    var hasHtml = msg.IndexOf("<") >= 0;
+                                    <tr class="@(hasHtml ? "contains-html" : "")">
+                                        <td><a href="@item.Context.EditUrl">edit</a></td>
+                                        <td>yes</td>
+                                        <td>@(item != null && item.Name != null ? item.Name.ToString() : string.Empty)</td>
+                                        <td>@HttpUtility.HtmlEncode(ConvertHtmlToText(msg))</td>
+                                        <td><a href="@(item.Context.MainUrl + "/id/" + (item != null && item.itemId != null ? item.itemId.ToString() : string.Empty))" target="_blank">Article &raquo;</a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </table>
+                </div>
+            }
+        }
+    </div>
+}
