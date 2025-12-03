@@ -1,30 +1,96 @@
-{{registerstylesheet "/DesktopModules/OpenContent/css/font-awesome/css/font-awesome.css"}}
+{{registerform "bootstrap"}}
 
-<section class="oc-hbs-client-side oc-cs-detail">
-  
-       
-        <header class="caption col-md-7">
-          <h2 class="title">{{Title}}</h2>
-		  </header>
-		  <article>
-         <div class="oc-image">
-		 <img src="{{Image.url}}" alt="" title="{{Title}}" />
-		 </div>
-		 <div class="oc-text">
-			<div class="oc-date">
-			  <i class="fa fa-calendar" aria-hidden="true"></i>
-			  {{formatDateTime publishstartdate "dd/MM/yyyy" "nl-NL" }}
-		  </div>
-          <div class="description">
-            {{Description}}
-          </div>
-          </div>
-		  </article>
+<article id="article-detail" class="oc-articles oc-article-detail" data-listpage="{{Context.MainUrl}}">
+	<header class="oc-article-header">
+		<h1>{{Title}}</h1>
+	</header>
 
 
-	  <footer>
-		<div class="col-md-12">
-		  <a class="dnnPrimaryAction"href="{{Context.MainUrl}}" class="btn btn-default">&laquo; Return to list</a>
+	<section class="oc-article-content">
+		{{Text}}
+
+		<div class="oc-article-back">
+			<div class="oc-buttons">
+				<a href="{{@root.Context.MainUrl}}" class="btn btn-primary">{{@root.Settings.Texts.BackToList}}</a>
+			</div>
 		</div>
-	  </footer>
-</section>
+	</section>
+
+
+
+	<footer>
+
+
+
+		{{#if Collections.Submissions.Items}}
+		<div class="oc-comments">
+			<h2 class="oc-comments-title">Article Comments:</h2>
+			{{#each Collections.Submissions.Items}}
+				{{#contains "<" Message}} 
+				{{!-- strip eventual posted HTML --}} 
+				{{else}} 
+					<div class="oc-comment">
+					<h3 class="oc-comment-title">Comment by: {{Name}}</h3>
+					<div class="oc-comment-text">
+						Message:<br>
+						{{replacenewline Message "<br>"}}
+					</div>
+					</div>
+				{{/contains}}
+			{{/each}}
+		</div>
+		{{/if}}
+		<div class="oc-add-comment">
+		<h3>Post a Comment</h3>
+
+			<div id="oc-comment-form" class="oc-comment-form"></div>
+				<button type="button" class="btn btn-primary" id="oc-submit-{{Context.ModuleId}}">Submit</button>
+				<div id="oc-thank-you" class="d-none after-comment">{{@root.Settings.Texts.AfterResponse}}</div>
+			</div>
+
+		</div>
+	</footer>
+</article>
+
+<script>
+
+	var strAfterResponse =
+		$(document).ready(function () {
+
+			var moduleId = {{@root.Context.ModuleId}};
+			var itemId = "{{@root.Context.Id}}";
+			var itemTitle = '{{replace Title "'" "_"}}';
+
+			itemTitle = itemTitle.replace("\"", "_");
+
+
+	var sf = $.ServicesFramework(moduleId);
+
+	var form = $("#oc-comment-form").openContentForm({
+		servicesFramework: sf,
+		onSubmit: function (data) {
+			// execute some code before submit
+			data.itemId = itemId;
+			data.itemTitle = itemTitle;
+			data.Title = itemTitle;
+			data.approvalEnabled = true;
+		},
+		onSubmited: function (data) {
+			// execute some code after submit
+			form.destroy();
+			$("#oc-thank-you").removeClass("d-none");
+			// alert(data.message);
+			$submitButton.hide();
+		}
+	});
+
+	var $submitButton = $('#oc-submit-' + moduleId);
+	$submitButton.click(function () {
+		form.submit(itemId);
+	});
+	
+					 
+});
+
+
+</script>

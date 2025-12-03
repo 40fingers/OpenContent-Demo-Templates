@@ -3,9 +3,12 @@
   "layout": {
     "template": "<div><div class=\"row\"><div class=\"col-md-12\" id=\"pos_1_1\"></div></div></div>",
     "bindings": {
-      "Name": "#pos_1_1",
-      "Email": "#pos_1_1",
-      "Message": "#pos_1_1"
+      "Texts": "#pos_1_1",
+      "Rss": "#pos_1_1",
+      "Sort": "#pos_1_1",
+      "ItemsPage": "#pos_1_1",
+      "CurrentPage": "#pos_1_1",
+      "Tags": "#pos_1_1"
     }
   }
 }

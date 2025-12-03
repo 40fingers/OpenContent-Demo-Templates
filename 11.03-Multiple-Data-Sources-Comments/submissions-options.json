@@ -6,9 +6,7 @@
     "Email": {
       "type": "email"
     },
-    "Phone": {
-      "type": "text"
-    },
+    
     "Message": {
       "type": "textarea"
     }

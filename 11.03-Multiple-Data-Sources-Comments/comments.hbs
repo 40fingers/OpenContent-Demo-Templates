@@ -1,0 +1,62 @@
+{{#if Context.IsEditable}}
+<div class="oc-article-comments">
+<h3>Unapproved</h3>
+<table class="table">
+	<tr>
+	<th class="oc-th-edit">
+	
+	</th>
+	<th class="oc-th-title">
+	Title
+	</th>
+	<th class="oc-th-message">
+	Message
+	</th>
+	<th class="oc-th-link">
+	For Article
+	</th>
+	
+	</tr>
+{{#each Items}}
+	{{#unless approved}}
+		<tr class="{{#contains "<" Message}}contains-html{{/contains}}">
+		<td><a href="{{Context.EditUrl}}">edit</a></td>
+		<td>{{Name}}</td>
+		<td>{{convertHtmlToText Message}}</td>
+		<td><a href="{{Context.MainUrl}}/id/{{itemId}}" target="_blank">{{#if itemTitle}}{{itemTitle}}{{else}}article{{/if}} &raquo;</a></td>
+		</tr>
+		
+	{{/unless}}
+{{/each}}
+</table>
+
+<h3>Approved</h3>
+<table class="table">
+<tr>
+	<th class="oc-th-edit">
+	
+	</th>
+	<th class="oc-th-title">
+	Title
+	</th>
+	<th class="oc-th-message">
+	Message
+	</th>
+	<th class="oc-th-link">
+	For Article
+	</th>
+	
+</tr>
+{{#each Items}}
+	{{#if approved}}
+		<tr class="{{#contains "<" Message}}contains-html{{/contains}}">
+		<td><a href="{{Context.EditUrl}}">edit</a></td>
+		<td>{{Name}}</td>
+		<td>{{convertHtmlToText Message}}</td>
+		<td><a href="{{Context.MainUrl}}/id/{{itemId}}" target="_blank">{{#if itemTitle}}{{itemTitle}}{{else}}article{{/if}} &raquo;</a></td>
+		</tr>
+	{{/if}}
+{{/each}}
+</table>
+</div>
+{{/if}}

@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "Texts": {
+      "type": "object",
+      "title": "Texts",
+      "properties": {
+        "ReadMore": {
+          "type": "string",
+          "title": "Read More Text",
+          "required": true,
+          "default": "Read More"
+        },
+        "BackToList": {
+          "type": "string",
+          "title": "Back to List Text",
+          "required": true,
+          "default": "Back to List"
+        },
+       
+        "SearchText": {
+          "type": "string",
+          "title": "Seach box text"
+        }
+       
+      }
+    }
+    
+  }
+}

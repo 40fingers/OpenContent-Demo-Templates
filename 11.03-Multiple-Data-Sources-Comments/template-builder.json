@@ -1,0 +1,167 @@
+{
+  "formfields": [
+    {
+      "fieldname": "Texts",
+      "title": "Texts",
+      "fieldtype": "object",
+      "subfields": [
+        {
+          "fieldname": "ReadMore",
+          "title": "Read More Text",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": true,
+          "hidden": false,
+          "default": "Read More",
+          "helper": "For lists",
+          "multilanguage": true,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "BackToList",
+          "title": "Back to List Text",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": true,
+          "hidden": false,
+          "default": "Back to List",
+          "helper": "For Detail",
+          "multilanguage": true,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Categories",
+          "title": "Categories Title",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": true,
+          "hidden": false,
+          "default": "Categories",
+          "multilanguage": true,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Series",
+          "title": "Series Title",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": true,
+          "hidden": false,
+          "multilanguage": false,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Columns",
+          "title": "Columns Title",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": true,
+          "hidden": false,
+          "multilanguage": false,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Filters",
+          "title": "Filters Title",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "SearchText",
+          "title": "Seach box text",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "NoMessages",
+          "title": "Nothing Found Text",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": true,
+          "hidden": false,
+          "default": "No messages found",
+          "helper": "If the list filter returns nothing",
+          "multilanguage": true,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Author",
+          "title": "Author",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "Related",
+          "title": "Related Title",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "Responses",
+          "title": "Resonses Title",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "AddResponse",
+          "title": "Add Response Title",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "AfterResponse",
+          "title": "Msg After Response",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "ResponsePrivacy",
+          "title": "Response Privacy Msg",
+          "fieldtype": "ckeditor",
+          "ckeditoroptions": {
+            "configset": "basic"
+          },
+          "advanced": false
+        }
+      ],
+      "advanced": false
+    },
+    {
+      "fieldname": "Rss",
+      "title": "Rss Feed",
+      "fieldtype": "checkbox",
+      "advanced": false
+    },
+    {
+      "fieldname": "Sort",
+      "title": "Sorting",
+      "fieldtype": "checkbox",
+      "advanced": false
+    },
+    {
+      "fieldname": "ItemsPage",
+      "title": "Items per page",
+      "fieldtype": "checkbox",
+      "advanced": false
+    },
+    {
+      "fieldname": "CurrentPage",
+      "title": "Current page label",
+      "fieldtype": "checkbox",
+      "advanced": false
+    },
+    {
+      "fieldname": "Tags",
+      "title": "Tags",
+      "fieldtype": "checkbox",
+      "advanced": false
+    }
+  ],
+  "formtype": "object"
+}

@@ -1,22 +1,22 @@
 {
   "type": "object",
   "properties": {
-   
     "Title": {
       "type": "string",
-      "title": "Title"
+      "title": "Title",
+      "required": true
     },
-    "Description": {
+    "Summary": {
       "type": "string",
-      "title": "Description"
-    }, 
-	"Summary": {
-      "type": "string",
-      "title": "Summary (list)"
+      "title": "Summary"
     },
-    "Image": {
+    "Text": {
       "type": "string",
-      "title": "Main Image"
+      "title": "Article Text"
+    },
+    "Featured": {
+      "type": "boolean",
+      "title": "Featured"
     },
     "publishstartdate": {
       "title": "Publish Start Date",
@@ -35,7 +35,7 @@
         "draft",
         "published"
       ],
-      "default": "draft",
+      "default": "published",
       "required": true
     }
   }
