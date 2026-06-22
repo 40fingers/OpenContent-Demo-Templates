@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "ModuleTitle": {
+      "type": "string",
+      "title": "Title"
+    },
+    "Text": {
+      "type": "string",
+      "title": "Text"
+    }
+  }
+}
