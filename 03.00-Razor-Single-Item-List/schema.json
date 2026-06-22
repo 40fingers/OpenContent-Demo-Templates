@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "Items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "Text": {
+            "type": "string",
+            "title": "Text"
+          }
+        }
+      }
+    }
+  }
+}

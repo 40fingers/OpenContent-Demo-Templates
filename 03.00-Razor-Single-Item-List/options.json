@@ -1,0 +1,17 @@
+{
+  "fields": {
+    "Items": {
+      "type": "array",
+      "items": {
+        "fields": {
+          "Title": {
+            "type": "text"
+          },
+          "Text": {
+            "type": "textarea"
+          }
+        }
+      }
+    }
+  }
+}

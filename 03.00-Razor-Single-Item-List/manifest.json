@@ -1,0 +1,17 @@
+{
+    "editWitoutPostback": true,
+    "index": true,
+	"builderVersion": 2, 
+
+    "templates": {
+        "template": {
+            "type": "single",
+            "title": "Single",            
+            "main": {
+                "template": "template.cshtml",
+				"clientSideData": false
+            }
+        }
+    }
+
+}
