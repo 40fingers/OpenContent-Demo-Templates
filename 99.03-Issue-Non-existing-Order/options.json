@@ -1,16 +1,18 @@
 {
   "fields": {
     "Title": {
+      "dependencies": {},
       "type": "text"
     },
     "Text": {
+      "dependencies": {},
       "type": "ckeditor"
     },
-	"Image": {
-      "type": "imagex"
+    "TestOrder": {
+      "dependencies": {}
     },
     "SortIndex": {
-      "type": "number"
+      "dependencies": {}
     }
   }
 }

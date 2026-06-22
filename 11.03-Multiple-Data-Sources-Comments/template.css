@@ -46,9 +46,10 @@
     gap: 2em;
     container-type: inline-size;
 }
-  .oc-article-list .oc-item-wrap {
+
+.oc-article-list .oc-item-wrap {
     flex: 0 0 100%;
-  }
+}
 
 @container (min-width: 600px) {
 .oc-article-list .oc-item-wrap {
