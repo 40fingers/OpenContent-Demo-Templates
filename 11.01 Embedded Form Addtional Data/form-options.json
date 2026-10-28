@@ -1,0 +1,27 @@
+{
+  "fields": {
+    "Name": {
+      "type": "text"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Phone": {
+      "type": "text"
+    },
+    "Product": {
+      "type": "select2",
+      "dataService": {
+        "action": "LookupData",
+        "data": {
+          "dataKey": "products",
+          "valueField": "Title",
+          "textField": "Title"
+        }
+      }
+    },
+    "Message": {
+      "type": "textarea"
+    }
+  }
+}

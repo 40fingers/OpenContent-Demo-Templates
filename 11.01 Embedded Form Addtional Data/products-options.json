@@ -1,0 +1,10 @@
+{
+  "type": "table",
+  "items": {
+    "fields": {
+      "Title": {
+        "type": "text"
+      }
+    }
+  }
+}
