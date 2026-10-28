@@ -1,0 +1,45 @@
+{{registereditform "form"}}
+
+{{registerstylesheet "template.css"}}
+
+<div class="oc-embedded-form oc-detail" data-moduleid="{{Context.ModuleId}}" data-id="{{Context.Id}}" data-title="{{Title}}">
+            {{#if Context.IsEditable}}
+            <div class="sorthandle">
+              
+               <a class="oc-edit-link" href="{{Context.EditUrl}}"><img src="/icons/sigma/Edit_16x16_Gray.png" alt="edit" /></a>
+              
+             
+            </div>
+         {{/if}}
+   
+  <article class="oc-detail">
+
+        {{#if Title}}
+        <h1 class="oc-title">{{Title}}</h1>
+        {{/if}}
+		{{#if Text}}
+		<div class="oc-text">
+		{{Text}}
+		</div>
+		{{/if}}
+		
+      <h4>Ask for a Quote:</h4>
+       <div class="contactform"></div>
+       <button type="button" class="oc-button-submit dnnPrimaryAction" id="submit-{{Context.ModuleId}}">Submit</button>
+      </article>          	
+      </div>    
+
+      <div class="oc-buttons">
+         <a class="dnnSecondaryAction" href="{{Context.MainUrl}}">Back to list</a>
+      </div>
+
+
+
+<script>
+    let moduleId = {{@root.Context.ModuleId}};
+    let itemId = {{@root.Context.Id}};
+    let itemTitle = "{{Title}}";
+    
+</script>
+
+
