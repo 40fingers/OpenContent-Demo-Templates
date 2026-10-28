@@ -1,0 +1,46 @@
+<div class="oc-multiple oc-blocks" data-moduleid="{{Context.ModuleId}}">
+<div class="cols">
+   {{#each Items}}
+   <div class="oc-item {{ColumnWidth}}" data-id="{{Context.Id}}">
+      {{#if Context.IsEditable}}
+      <div class="sorthandle">
+         <span class="oc-block-count">order-{{SortIndex}}</span>
+         <a class="oc-edit-link" href="{{Context.EditUrl}}"><img src="/icons/sigma/Edit_16x16_Gray.png"
+               alt="edit" /></a>
+         <span class="oc-drag-order" aria-hidden="true" style="cursor: move;cursor: -webkit-grabbing;"><img
+               src="/icons/sigma/DragDrop_15x15_Standard.png" alt="edit" /></span>
+      </div>
+      {{/if}}
+
+      <div class="oc-item-inner">
+         <a class="oc-detail-link" href="{{Context.DetailUrl}}">
+            {{#if Image.url}}
+            <div class="oc-image">
+               <img src="{{Image.url}}" alt="{{Title}}" />
+            </div>
+
+            {{/if}}
+
+            {{#if Headings}}
+            
+            {{#if Headings.Heading1}}
+            <h2 class="oc-heading-1">{{Headings.Heading1}}</h2>
+            {{/if}}
+            {{#if Headings.Heading2}}
+            <h3 class="oc-heading-2">{{Headings.Heading2}}</h3>
+            {{/if}}
+           
+           
+            {{else}}
+            <h3 class="oc-title">* No title Entered *</h3>
+            {{/if}}
+             {{#if Date}}<h4 class="oc-sub-title">{{formatDateTime Date "dd/MMM/yyyy" "nl-NL"}}</h4>{{/if}}
+
+
+         </a>
+
+      </div>
+   </div>
+   {{/each}}
+   </div>
+</div>
