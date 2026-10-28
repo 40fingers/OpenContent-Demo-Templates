@@ -1,0 +1,27 @@
+@inherits Satrabel.OpenContent.Components.OpenContentWebPage
+
+<div class="oc-single oc-list">
+   @foreach (var i in Model.Items)
+   {
+      <div class="oc-item">
+         <div class="oc-item-inner">
+
+            @if (i.Title != null && i.Title != "")
+            {
+               <h3 class="oc-title">@i.Title</h3>
+            }
+            @if (i.Text != null && i.Text != "")
+            {
+               <div class="oc-text">
+                  @i.Text
+               </div>
+            }
+
+         </div>
+      </div>
+   }
+</div>
+
+@* Print Model for debugging (uncomment)
+@ObjectInfo.Print(Model)
+*@

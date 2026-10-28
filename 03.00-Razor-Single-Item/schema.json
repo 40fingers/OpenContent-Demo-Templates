@@ -1,19 +1,13 @@
 {
   "type": "object",
   "properties": {
-    "Title": {
+    "ModuleTitle": {
       "type": "string",
       "title": "Title"
     },
     "Text": {
       "type": "string",
       "title": "Text"
-    },
-    "SortIndex": {
-      "type": "number",
-      "title": "SortIndex",
-      "required": true,
-      "default": "0"
     }
   }
 }
