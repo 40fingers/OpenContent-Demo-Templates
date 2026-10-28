@@ -9,7 +9,7 @@
       "title": "Text",
       "type": "string"
     },
-    "TestOrder": {
+    "testOrder": {
       "title": "Test Order",
       "type": "number"
     },
