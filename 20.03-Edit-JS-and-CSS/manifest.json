@@ -1,0 +1,18 @@
+{
+    "builderVersion" : 2,
+	"editWitoutPostback": true,
+    "index": true,
+	"shared": false,
+
+    "templates": {
+        "template": {
+            "type": "multiple",
+            "title": "List",            
+            "main": {
+                "template": "template.hbs",
+				"clientSideData": false
+            }
+        }
+    }
+
+}

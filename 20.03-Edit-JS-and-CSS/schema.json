@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+     "Headings": {
+      "title": "Headings",
+      "type": "object"
+    },
+    "Image": {
+      "title": "Image",
+      "type": "string"
+    },
+    "Date": {
+      "title": "Date",
+      "type": "string"
+    },
+    "ColumnWidth": {
+      "title": "Column Width",
+      "type": "string"
+    },
+   
+  }
+}

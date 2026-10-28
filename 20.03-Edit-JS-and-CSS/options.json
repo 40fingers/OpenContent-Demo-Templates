@@ -1,0 +1,25 @@
+{
+  "fields": {
+    "Headings": {
+      "dependencies": {},
+      "type": "headings"
+    },
+    "Title": {
+      "dependencies": {},
+      "type": "text"
+    },
+    "Image": {
+      "dependencies": {},
+      "type": "imagebrowser"
+    },
+    "Date": {
+      "dependencies": {},
+      "type": "date"
+    },
+    "ColumnWidth": {
+      "dependencies": {},
+      "type": "selectColWidth"
+    }
+    
+  }
+}
